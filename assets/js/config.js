@@ -1,1 +1,1 @@
-const config = {API_URL: "http://backend.rawasi.app"};
+const config = {API_URL: "https://backend.rawasi.app"};

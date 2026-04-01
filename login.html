@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="login_title">Rawasi - Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="description" data-i18n="login_meta_description"
+          content="Login to your Rawasi account to access your learning management system.">
+
+    <!-- Fonts -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        /* Sign Up Container */
+        .login-container {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .login-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .signup-title h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .signup-title p {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(78, 99, 217, 0.1);
+        }
+
+        .password-hint {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: 5px;
+        }
+
+        /* Google Sign In Button */
+        .google-signin-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            color: #5F6368;
+            border: 1px solid #DADCE0;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .google-signin-btn:hover {
+            background: #F8F9FA;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .google-icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        /* Divider */
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #eee;
+        }
+
+        .divider::before {
+            margin-right: 10px;
+        }
+
+        .divider::after {
+            margin-left: 10px;
+        }
+
+        /* Submit Button */
+        .btn-submit {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Login Link */
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--gray);
+        }
+
+        .login-link a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Error Message */
+        .error-message {
+            color: var(--danger);
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: none;
+        }
+
+
+        /* Status Cards */
+        .status-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        .status-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .status-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .status-description {
+            color: var(--gray);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .status-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: var(--light-gray);
+            color: var(--dark);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .user-info {
+            background: var(--light-gray);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .user-info-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .user-info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .info-label {
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .info-value {
+            color: var(--gray);
+        }
+
+        /* Loading spinner */
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Snackbar styles */
+        .snackbar-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .snackbar {
+            min-width: 300px;
+            max-width: 90vw;
+            padding: 12px 20px;
+            border-radius: 4px;
+            color: white;
+            margin-bottom: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .snackbar.error {
+            background-color: var(--danger);
+        }
+
+        .snackbar.success {
+            background-color: var(--success);
+        }
+
+        .snackbar.warning {
+            background-color: var(--warning);
+        }
+
+        .snackbar.info {
+            background-color: var(--info);
+        }
+
+        .snackbar .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-left: 15px;
+            font-size: 16px;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+
+        /* Header styles */
+        .dropdown-toggle {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+        .dropdown-toggle:hover {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+
+        @media (max-width: 768px) {
+            .login-container {
+                margin: 80px 20px;
+                padding: 30px;
+            }
+
+            .signup-title h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<!-- Header -->
+<header id="header">
+    <div class="container header-container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="Rawasi Logo" id="logo-img">
+            <span class="logo-text" data-i18n="Rawasi">Rawasi</span>
+        </a>
+
+        <div class="header-actions">
+            <!-- Language Dropdown -->
+            <div class="language-dropdown">
+                <button class="dropdown-toggle" aria-expanded="false">
+                    <span class="current-lang">EN</span>
+                    <span class="material-symbols-outlined">arrow_drop_down</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <button data-lang="en">
+                            <span class="flag-icon">🇬🇧</span> English
+                        </button>
+                    </li>
+                    <li>
+                        <button data-lang="ar">
+                            <span class="flag-icon">🇪🇬</span> العربية
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Login Form -->
+<main class="container">
+    <div class="login-container">
+        <div class="login-title">
+            <h1 data-i18n="signin_heading">Welcome Back!</h1>
+            <p data-i18n="signin_subheading">We're thrilled to have you back.</p>
+        </div>
+
+        <!-- Status Cards -->
+        <div class="status-card" id="user-not-verified">
+            <div class="status-icon" style="color: var(--warning);">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <h3 class="status-title" data-i18n="verify_email_title">Verify Your Email</h3>
+            <p class="status-description" data-i18n="verify_email_desc">Your email address has not been verified yet. Please check your inbox for the verification email.</p>
+            <div class="status-actions">
+                <button class="btn btn-primary" id="resend-verification-btn">
+                    <span data-i18n="resend_verification">Resend Verification Email</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="status-card" id="user-has-lms">
+            <div class="status-icon" style="color: var(--success);">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 class="status-title" data-i18n="login_success_title">Login Successful!</h3>
+            <p class="status-description" data-i18n="login_success_desc">You have successfully logged in to your account.</p>
+
+            <div class="user-info">
+                <div class="user-info-item">
+                    <span class="info-label" data-i18n="name_label">Name:</span>
+                    <span class="info-value" id="user-name"></span>
+                </div>
+                <div class="user-info-item">
+                    <span class="info-label" data-i18n="email_label">Email:</span>
+                    <span class="info-value" id="user-email"></span>
+                </div>
+                <div class="user-info-item">
+                    <span class="info-label" data-i18n="tenant_label">Tenant:</span>
+                    <span class="info-value" id="tenant-name"></span>
+                </div>
+                <div class="user-info-item">
+                    <span class="info-label" data-i18n="plan_label">Plan:</span>
+                    <span class="info-value" id="user-plan"></span>
+                </div>
+            </div>
+
+            <div class="status-actions">
+                <button class="btn btn-success" id="go-to-lms-btn">
+                    <span data-i18n="go_to_lms">Go to Your LMS</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="status-card" id="user-no-lms">
+            <div class="status-icon" style="color: var(--info);">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <h3 class="status-title" data-i18n="no_lms_title">No LMS Configured</h3>
+            <p class="status-description" data-i18n="no_lms_desc">Your account is verified but you haven't set up your Learning Management System yet.</p>
+            <div class="status-actions">
+                <button class="btn btn-primary" id="create-lms-btn">
+                    <span data-i18n="create_lms">Create LMS</span>
+                </button>
+            </div>
+        </div>
+
+        <form id="login-form">
+            <!-- Google Sign In -->
+            <div id="g_id_onload"
+                 data-client_id="33613048297-niin9ih61ptj5k6vpbbrbdsag0ka7ahs.apps.googleusercontent.com"
+                 data-callback="handleGoogleResponse"
+                 data-auto_prompt="true">
+            </div>
+
+            <div class="g_id_signin"
+                 data-type="standard"
+                 data-size="large"
+                 data-theme="outline"
+                 data-text="sign_in_with"
+                 data-shape="rect"
+                 data-logo_alignment="left">
+            </div>
+
+            <div class="divider" data-i18n="or_divider">or</div>
+
+            <div class="form-group">
+                <label for="email" data-i18n="email_label">Email Address</label>
+                <input type="email" id="email" class="form-control" required>
+                <div class="error-message" id="email-error" data-i18n="email_error">Please enter a valid email address</div>
+            </div>
+
+            <div class="form-group">
+                <label for="password" data-i18n="password_label">Password</label>
+                <input type="password" id="password" class="form-control" required minlength="8">
+                <div class="error-message" id="password-error" data-i18n="password_error">Password must be at least 8 characters</div>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submit-btn">
+                <span data-i18n="login_button">Log in</span>
+            </button>
+        </form>
+
+        <div class="login-link">
+            <span data-i18n="new_here">New here?</span>
+            <a href="sign-up.html" data-i18n="signup_link">Create an account</a>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="Rawasi Logo">
+                    <span class="footer-logo-text" data-i18n="Rawasi">Rawasi</span>
+                </div>
+                <p data-i18n="footer_about">Empowering creators and educators to build online learning experiences with ease. Your platform, your rules.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading" data-i18n="footer_links1">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html#features" class="footer-link" data-i18n="footer_link1">Features</a></li>
+                    <li><a href="index.html#pricing" class="footer-link" data-i18n="footer_link2">Pricing</a></li>
+                    <li><a href="#" class="footer-link" data-i18n="footer_link3">Blog</a></li>
+                    <li><a href="#" class="footer-link" data-i18n="footer_link4">Success Stories</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading" data-i18n="footer_links2">Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link" data-i18n="footer_link5">Documentation</a></li>
+                    <li><a href="#" class="footer-link" data-i18n="footer_link6">Help Center</a></li>
+                    <li><a href="#" class="footer-link" data-i18n="footer_link7">Community</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3 class="footer-heading" data-i18n="footer_contact">Contact Us</h3>
+                <p><span class="material-symbols-outlined icon">mail</span> <span data-i18n="footer_email">support@rawasi.app</span></p>
+                <p><span class="material-symbols-outlined icon">call</span> <span data-i18n="footer_phone">+1 (555) 123-4567</span></p>
+                <p><span class="material-symbols-outlined icon">location_on</span> <span data-i18n="footer_address">123 Education St, San Francisco, CA</span></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span data-i18n="footer_copyright">2024 Rawasi. All rights reserved.</span> | <a href="#"
+                                                                                                       class="footer-link"
+                                                                                                       data-i18n="footer_privacy">Privacy
+                Policy</a> | <a href="#" class="footer-link" data-i18n="footer_terms">Terms of Service</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Snackbar container -->
+<div id="snackbar-container" class="snackbar-container"></div>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="assets/js/config.js"></script>
+
+<!-- Main Script -->
+<script>
+
+    // Show snackbar notification
+    function showSnackbar(message, type = 'default') {
+        // Create snackbar container if it doesn't exist
+        let snackbarContainer = document.getElementById('snackbar-container');
+        if (!snackbarContainer) {
+            snackbarContainer = document.createElement('div');
+            snackbarContainer.id = 'snackbar-container';
+            snackbarContainer.className = 'snackbar-container';
+            document.body.appendChild(snackbarContainer);
+        }
+
+        // Create snackbar element
+        const snackbar = document.createElement('div');
+        snackbar.className = `snackbar ${type}`;
+        snackbar.innerHTML = `
+            <span>${message}</span>
+            <button class="close-btn">&times;</button>
+        `;
+
+        // Add close functionality
+        snackbar.querySelector('.close-btn').addEventListener('click', () => {
+            snackbarContainer.removeChild(snackbar);
+        });
+
+        // Add to container
+        snackbarContainer.appendChild(snackbar);
+
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            if (snackbar.parentNode === snackbarContainer) {
+                snackbarContainer.removeChild(snackbar);
+            }
+        }, 5000);
+    }
+
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Form validation
+    document.getElementById('login-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Reset errors
+        document.querySelectorAll('.error-message').forEach(el => {
+            el.style.display = 'none';
+        });
+
+        // Validate form
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value;
+
+        let isValid = true;
+
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            document.getElementById('email-error').style.display = 'block';
+            isValid = false;
+        }
+
+        if (!password || password.length < 8) {
+            document.getElementById('password-error').style.display = 'block';
+            isValid = false;
+        }
+
+        if (!isValid) return;
+
+        // Show loading state
+        const submitBtn = document.getElementById('submit-btn');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `<span class="spinner"></span> ${translations[currentLang].processing}`;
+
+        try {
+            const response = await fetch(`${config.API_URL}/tenants/sign-in`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password
+                })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                // Hide the form
+                document.getElementById('login-form').style.display = 'none';
+
+                if (data.tenant) {
+                    // User has LMS configured
+                    document.getElementById('user-has-lms').style.display = 'block';
+
+                    // Populate user info
+                    document.getElementById('user-name').textContent = data.user.name || 'N/A';
+                    document.getElementById('user-email').textContent = data.user.email || 'N/A';
+                    document.getElementById('tenant-name').textContent = data.tenant.name || 'N/A';
+                    document.getElementById('user-plan').textContent = data.tenant.plan || 'N/A';
+
+                    // Set up LMS redirect button
+                    document.getElementById('go-to-lms-btn').addEventListener('click', () => {
+                        let lmsUrl;
+                        if (data.tenant.domain) {
+                            lmsUrl = data.tenant.domain.startsWith('http') ? data.tenant.domain : `https://${data.tenant.domain}`;
+                        } else if (data.tenant.subdomain) {
+                            lmsUrl = `https://${data.tenant.subdomain}.rawasi.app`;
+                        } else {
+                            showSnackbar('No valid domain configured', 'error');
+                            return;
+                        }
+                        window.location.href = lmsUrl;
+                    });
+                } else {
+                    // User doesn't have LMS configured
+                    document.getElementById('user-no-lms').style.display = 'block';
+
+                    // Set up create LMS button
+                    document.getElementById('create-lms-btn').addEventListener('click', () => {
+                        window.location.href = `create-lms.html?token=${data.token}`;
+                    });
+                }
+            } else if (response.status === 400) {
+                // Invalid credentials
+                showSnackbar(translations[currentLang].invalid_credentials, 'error');
+            } else if (response.status === 401) {
+                // Email not verified
+                document.getElementById('login-form').style.display = 'none';
+                document.getElementById('user-not-verified').style.display = 'block';
+
+                // Set up resend verification button
+                document.getElementById('resend-verification-btn').addEventListener('click', async () => {
+                    try {
+                        const response = await fetch(`${config.API_URL}/tenants/resend-email`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                email: email,
+                                password: password
+                            })
+                        });
+                        showSnackbar(translations[currentLang].verification_sent, 'success');
+                    } catch (error) {
+                        showSnackbar(translations[currentLang].error_occurred, 'error');
+                    }
+                });
+            } else {
+                // Other error
+                showSnackbar(data.message || translations[currentLang].error_occurred, 'error');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            showSnackbar(translations[currentLang].network_error, 'error');
+        } finally {
+            // Restore button state
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+        }
+    });
+
+    // Language switcher functionality
+    let currentLang = 'en';
+
+    // Initialize language
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedLang = localStorage.getItem('Rawasi-lang') || 'en';
+        updatePageLanguage(savedLang);
+
+        // Update language display
+        document.querySelectorAll('.current-lang').forEach(e => {
+            e.textContent = savedLang === 'en' ? 'EN' : 'الع';
+        });
+
+        // Language dropdown functionality
+        document.querySelectorAll('.dropdown-menu button').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const lang = this.dataset.lang;
+                updatePageLanguage(lang);
+
+                // Update language display
+                document.querySelectorAll('.current-lang').forEach(e => {
+                    e.textContent = lang === 'en' ? 'EN' : 'الع';
+                });
+
+                // Close dropdowns
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    menu.classList.remove('show');
+                });
+                document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        });
+
+        // Dropdown toggle functionality
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+
+                const menu = this.nextElementSibling;
+                if (menu.classList.contains('dropdown-menu')) {
+                    menu.classList.toggle('show');
+                }
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function() {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.remove('show');
+            });
+            document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    });
+
+    // Update page language
+    function updatePageLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+        // Update all translatable elements
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                el.textContent = translations[lang][key];
+
+                // For input placeholders
+                if (el.tagName === 'INPUT' && el.getAttribute('placeholder')) {
+                    el.setAttribute('placeholder', translations[lang][key]);
+                }
+            }
+        });
+
+        // Save language preference
+        localStorage.setItem('Rawasi-lang', lang);
+    }
+    async function handleGoogleResponse(response) {
+        const idToken = response.credential; // Google ID token
+
+        try {
+            const res = await fetch(`${config.API_URL}/tenants/auth/google`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ token: idToken }),
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                alert("Login failed: " + (data.error || "Unknown error"));
+                return;
+            }
+
+            console.log("User signed in:", data);
+            if (data.tenant) {
+                let lmsUrl;
+                if (data.tenant.domain) {
+                    lmsUrl = data.tenant.domain.startsWith('http') ? data.tenant.domain : `https://${data.tenant.domain}`;
+                } else if (data.tenant.subdomain) {
+                    lmsUrl = `https://${data.tenant.subdomain}.rawasi.app`;
+                } else {
+                    showSnackbar('No valid domain configured', 'error');
+                    return;
+                }
+                window.location.href = lmsUrl;
+            } else {
+                window.location.href = `create-lms.html?token=${data.token}`
+            }
+        } catch (err) {
+            console.error("Google login error:", err);
+        }
+        console.log(response.credential)
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedLang = localStorage.getItem('Rawasi-lang') || 'en';
+        currentLang = savedLang;
+        document.documentElement.lang = savedLang;
+        document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+
+        // Update translations
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[savedLang] && translations[savedLang][key]) {
+                el.textContent = translations[savedLang][key];
+            }
+        });
+    });
+</script>
+<script src="assets/js/localization.js"></script>
+</body>
+</html>

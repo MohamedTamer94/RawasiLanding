@@ -574,7 +574,7 @@ header.scrolled {
 
 /* Features Section */
 .section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .section-title {
@@ -1160,3 +1160,87 @@ footer {
     font-family: 'Material Symbols Outlined';
 }
 
+/* Section spacing */
+.social-proof-section {
+    padding: 80px 0;
+}
+
+/* Card */
+.testimonial-card {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 28px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    text-align: center;
+}
+
+/* Header (logo) */
+.testimonial-header {
+    margin-bottom: 20px;
+}
+
+.testimonial-logo {
+    max-height: 100px;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+/* Text */
+.testimonial-text {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* Stars */
+.testimonial-rating {
+    margin-bottom: 16px;
+}
+
+.testimonial-rating i {
+    color: #FFB800;
+    margin: 0 2px;
+    font-size: 14px;
+}
+
+/* Author block */
+.testimonial-author {
+    font-size: 15px;
+    color: #222;
+}
+
+.testimonial-author strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+/* Stats */
+.author-stats {
+    font-size: 14px;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* Role */
+.author-role {
+    font-size: 13px;
+    color: #999;
+    margin-top: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonial-card {
+        padding: 24px 18px;
+    }
+
+    .testimonial-text {
+        font-size: 15px;
+    }
+}

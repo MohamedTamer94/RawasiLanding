@@ -168,7 +168,7 @@ const translations = {
         "footer_link_how": "كيف تبدأ",
         "footer_link_success": "تجارب العملاء",
         "footer_link_contact": "تواصل معنا",
-        "footer_link5": "سياسة الخصوية",
+        "footer_link5": "سياسة الخصوصية",
         "footer_link6": "الشروط والأحكام",
         "footer_whatsapp": "واتساب: 0101390522",
         "footer_email": "hello@rawasi.app",

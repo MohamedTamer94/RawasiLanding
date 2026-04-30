@@ -2,9 +2,9 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <title data-i18n="page_title">Privacy Policy - Rawasi</title>
+    <title data-i18n="page_title">Terms & Conditions - Rawasi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rawasi privacy policy - how we handle your data">
+    <meta name="description" content="Rawasi Terms & Conditions and Refund Policy">
     <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
     <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
@@ -19,11 +19,7 @@
     <link rel="stylesheet" href="assets/css/index.css">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --primary: #007ACB;
@@ -41,295 +37,297 @@
             font-family: 'Poppins', sans-serif;
             color: var(--dark);
             line-height: 1.7;
-            background-color: var(--light);
+            background-color: var(--gray-light);
         }
 
-        [lang="ar"] body {
-            font-family: 'Tajawal', 'Poppins', sans-serif;
-        }
+        [lang="ar"] body { font-family: 'Tajawal', 'Poppins', sans-serif; }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
         /* Header */
         header {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
+            top: 0; left: 0; width: 100%;
             padding: 20px 0;
             z-index: 1000;
-            transition: var(--transition);
             background: var(--primary);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo img {
-            width: 70px;
-            height: 70px;
-            border-radius: 12px;
-            padding: 5px;
-            filter: brightness(0) invert(1);
-        }
-
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: white;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .nav-link {
-            color: white;
-            font-weight: 500;
             transition: var(--transition);
         }
 
-        .nav-link:hover {
-            color: var(--accent);
-        }
+        .header-container { display: flex; justify-content: space-between; align-items: center; }
 
-        .language-dropdown {
-            position: relative;
-        }
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo img { width: 70px; height: 70px; border-radius: 12px; padding: 5px; filter: brightness(0) invert(1); }
+        .logo-text { font-size: 1.5rem; font-weight: 700; color: white; }
 
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-link { color: white; font-weight: 500; transition: var(--transition); }
+        .nav-link:hover { color: var(--accent); }
+
+        .language-dropdown { position: relative; }
         .dropdown-toggle {
-            display: flex;
-            align-items: center;
-            background: rgba(255,255,255,0.15);
-            border: none;
-            color: white;
-            cursor: pointer;
-            gap: 8px;
-            padding: 8px 16px;
-            border-radius: 30px;
-            font-weight: 500;
+            display: flex; align-items: center;
+            background: rgba(255,255,255,0.15); border: none; color: white;
+            cursor: pointer; gap: 8px; padding: 8px 16px;
+            border-radius: 30px; font-weight: 500;
         }
-
         .dropdown-menu {
-            position: absolute;
-            right: 0;
-            top: 100%;
-            background: white;
-            border-radius: 12px;
+            position: absolute; right: 0; top: 100%;
+            background: white; border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            padding: 8px 0;
-            min-width: 130px;
-            display: none;
-            z-index: 100;
+            padding: 8px 0; min-width: 130px; display: none; z-index: 100;
         }
-
-        .dropdown-menu.show {
-            display: block;
-        }
-
+        .dropdown-menu.show { display: block; }
         .dropdown-menu button {
-            width: 100%;
-            text-align: left;
-            padding: 10px 20px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: var(--transition);
+            width: 100%; text-align: left; padding: 10px 20px;
+            background: none; border: none; cursor: pointer;
+            display: flex; align-items: center; gap: 10px; transition: var(--transition);
         }
-
-        .dropdown-menu button:hover {
-            background: rgba(0,122,203,0.1);
-            color: var(--primary);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.8rem;
-            cursor: pointer;
-        }
+        .dropdown-menu button:hover { background: rgba(0,122,203,0.1); color: var(--primary); }
+        .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 1.8rem; cursor: pointer; }
 
         /* Page Header */
         .page-header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             padding: 140px 0 60px;
-            color: white;
-            text-align: center;
+            color: white; text-align: center;
         }
+        .page-header h1 { font-size: 2.8rem; margin-bottom: 15px; }
+        .page-header p { font-size: 1.1rem; opacity: 0.9; }
 
-        .page-header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
+        /* TOC Nav */
+        .toc-nav {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 80px;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
+        .toc-nav .container {
+            display: flex;
+            gap: 4px;
+            overflow-x: auto;
+            padding: 0 20px;
+            scrollbar-width: none;
+        }
+        .toc-nav .container::-webkit-scrollbar { display: none; }
+        .toc-btn {
+            padding: 14px 18px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            white-space: nowrap;
+            color: var(--gray);
+            transition: var(--transition);
+        }
+        .toc-btn:hover, .toc-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
 
-        .page-header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        /* Content Section */
-        .content-section {
-            padding: 60px 0;
-            background: var(--gray-light);
-        }
+        /* Content */
+        .content-section { padding: 50px 0 80px; }
 
         .legal-card {
             background: white;
-            border-radius: 24px;
+            border-radius: 20px;
             padding: 50px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+            margin-bottom: 24px;
+            scroll-margin-top: 140px;
         }
 
-        .legal-card h2 {
-            color: var(--primary);
-            font-size: 1.8rem;
-            margin-top: 30px;
-            margin-bottom: 15px;
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--gray-light);
         }
 
-        .legal-card h2:first-of-type {
-            margin-top: 0;
+        .card-icon {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 1.4rem; flex-shrink: 0;
+        }
+
+        .card-header h2 {
+            color: var(--dark);
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .card-header .card-subtitle {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 2px;
         }
 
         .legal-card h3 {
-            font-size: 1.3rem;
-            margin-top: 25px;
-            margin-bottom: 12px;
-            color: var(--dark);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 28px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .legal-card p {
-            margin-bottom: 16px;
-            color: #444;
+        .legal-card h3::before {
+            content: '';
+            display: inline-block;
+            width: 4px; height: 16px;
+            background: var(--secondary);
+            border-radius: 2px;
         }
+
+        .legal-card p { margin-bottom: 14px; color: #444; font-size: 0.97rem; }
 
         .legal-card ul, .legal-card ol {
-            margin: 15px 0 20px 25px;
+            margin: 10px 0 18px 20px;
         }
-
-        .legal-card li {
-            margin-bottom: 10px;
-            color: #444;
-        }
+        .legal-card li { margin-bottom: 8px; color: #444; font-size: 0.97rem; }
 
         .last-updated {
-            background: #e8f0fe;
-            padding: 12px 20px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            font-size: 0.9rem;
+            background: linear-gradient(135deg, #e8f0fe, #e0f7f4);
+            padding: 10px 18px;
+            border-radius: 10px;
+            margin-bottom: 24px;
+            font-size: 0.88rem;
             color: var(--primary);
             display: inline-block;
+            font-weight: 500;
         }
 
-        hr {
-            margin: 30px 0;
-            border: none;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        /* Highlight boxes */
+        .info-box {
+            background: #f0f9ff;
+            border-left: 4px solid var(--primary);
+            border-radius: 0 10px 10px 0;
+            padding: 14px 18px;
+            margin: 16px 0;
+            font-size: 0.93rem;
+            color: #2c5282;
         }
 
-        /* RTL Support */
-        [dir="rtl"] {
-            text-align: right;
+        .warning-box {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 10px 10px 0;
+            padding: 14px 18px;
+            margin: 16px 0;
+            font-size: 0.93rem;
+            color: #92400e;
         }
 
-        [dir="rtl"] .legal-card ul,
-        [dir="rtl"] .legal-card ol {
-            margin: 15px 25px 20px 0;
+        .success-box {
+            background: #f0fdf4;
+            border-left: 4px solid var(--secondary);
+            border-radius: 0 10px 10px 0;
+            padding: 14px 18px;
+            margin: 16px 0;
+            font-size: 0.93rem;
+            color: #14532d;
         }
 
-        [dir="rtl"] .dropdown-menu {
-            right: auto;
-            left: 0;
+        /* Refund table */
+        .refund-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0 24px;
+            font-size: 0.93rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
+        .refund-table th {
+            background: var(--primary);
+            color: white;
+            padding: 13px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .refund-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #f0f0f0;
+            color: #444;
+        }
+        .refund-table tr:last-child td { border-bottom: none; }
+        .refund-table tr:nth-child(even) td { background: #fafafa; }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+        .badge-green { background: #dcfce7; color: #166534; }
+        .badge-yellow { background: #fef9c3; color: #854d0e; }
+        .badge-red { background: #fee2e2; color: #991b1b; }
+
+        /* RTL */
+        [dir="rtl"] { text-align: right; }
+        [dir="rtl"] .legal-card ul, [dir="rtl"] .legal-card ol { margin: 10px 20px 18px 0; }
+        [dir="rtl"] .dropdown-menu { right: auto; left: 0; }
+        [dir="rtl"] .info-box, [dir="rtl"] .warning-box, [dir="rtl"] .success-box {
+            border-left: none;
+            border-right: 4px solid var(--primary);
+            border-radius: 10px 0 0 10px;
+        }
+        [dir="rtl"] .warning-box { border-right-color: #f59e0b; }
+        [dir="rtl"] .success-box { border-right-color: var(--secondary); }
+        [dir="rtl"] .legal-card h3::before { display: none; }
+        [dir="rtl"] .refund-table th, [dir="rtl"] .refund-table td { text-align: right; }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
+            .mobile-menu-btn { display: block; }
             .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                max-width: 300px;
-                height: 100vh;
-                background: var(--dark);
-                flex-direction: column;
-                padding: 80px 30px;
-                transition: var(--transition);
-                z-index: 999;
+                position: fixed; top: 0; right: -100%; width: 80%; max-width: 300px;
+                height: 100vh; background: var(--dark); flex-direction: column;
+                padding: 80px 30px; transition: var(--transition); z-index: 999;
             }
-            .nav-links.active {
-                right: 0;
-            }
-            .page-header h1 {
-                font-size: 2rem;
-            }
-            .legal-card {
-                padding: 30px 20px;
-            }
-            .legal-card h2 {
-                font-size: 1.5rem;
-            }
+            .nav-links.active { right: 0; }
+            .page-header h1 { font-size: 2rem; }
+            .legal-card { padding: 28px 20px; }
+            .card-header h2 { font-size: 1.35rem; }
+            .refund-table { font-size: 0.83rem; }
+            .refund-table th, .refund-table td { padding: 10px 12px; }
         }
 
         @media (max-width: 480px) {
-            .page-header {
-                padding: 120px 0 40px;
-            }
-            .legal-card h2 {
-                font-size: 1.3rem;
-            }
+            .page-header { padding: 120px 0 40px; }
         }
 
-        .btn-back {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--primary);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 40px;
-            font-weight: 500;
-            margin-top: 30px;
-            transition: var(--transition);
-        }
-
-        .btn-back:hover {
-            background: var(--primary-dark);
-            transform: translateX(-5px);
-        }
-
-        [dir="rtl"] .btn-back:hover {
-            transform: translateX(5px);
-        }
+        /* Footer (pass-through) */
+        footer { background: #1a1a2e; color: #ccc; padding: 60px 0 30px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+        .footer-logo img { width: 50px; height: 50px; filter: brightness(0) invert(1); border-radius: 8px; }
+        .footer-logo-text { font-size: 1.3rem; font-weight: 700; color: white; }
+        .footer-about p { font-size: 0.9rem; line-height: 1.7; }
+        .social-links { display: flex; gap: 12px; margin-top: 16px; }
+        .social-link { width: 38px; height: 38px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: var(--transition); }
+        .social-link:hover { background: var(--primary); }
+        .footer-heading { color: white; font-size: 1rem; font-weight: 600; margin-bottom: 16px; }
+        .footer-links { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-link { color: #ccc; font-size: 0.9rem; transition: var(--transition); }
+        .footer-link:hover { color: var(--accent); }
+        .footer-contact p { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-size: 0.9rem; }
+        .footer-contact .icon { font-size: 1.1rem; color: var(--secondary); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; text-align: center; font-size: 0.85rem; color: #888; }
     </style>
 </head>
 <body>
+
 <header id="header">
     <div class="container header-container">
         <a href="index.html" class="logo">
@@ -357,146 +355,519 @@
 <main>
     <section class="page-header">
         <div class="container">
-            <h1 data-i18n="terms_page_title">Terms and Conditions</h1>
-            <p data-i18n="terms_page_subtitle">How we collect, use, and protect your information</p>
+            <h1 data-i18n="terms_page_title">Terms & Conditions</h1>
+            <p data-i18n="terms_page_subtitle">Please read these terms carefully before using our services</p>
         </div>
     </section>
 
+    <!-- Sticky TOC -->
+    <div class="toc-nav">
+        <div class="container">
+            <button class="toc-btn active" onclick="scrollToCard('terms-card')" data-i18n="toc_terms">Terms & Conditions</button>
+            <button class="toc-btn" onclick="scrollToCard('refund-card')" data-i18n="toc_refund">Refund Policy</button>
+        </div>
+    </div>
+
     <section class="content-section">
         <div class="container">
-            <div class="legal-card">
-                <div class="last-updated" data-i18n="last_updated">📅 Last Updated: April, 2026</div>
 
-                <!-- ENGLISH CONTENT -->
+            <!-- ==================== TERMS & CONDITIONS ==================== -->
+            <div class="legal-card" id="terms-card">
+                <div class="last-updated" data-i18n="last_updated">📅 Last Updated: April 2026</div>
+
+                <!-- ENGLISH -->
                 <div class="policy-content-en" data-lang-content="en">
-                    <h3>1. Introduction</h3>
-                    <p>
-                        These Terms & Conditions govern your rights and responsibilities when using Rawasi’s services to create and operate custom learning platforms.
-                    </p>
+                    <div class="card-header">
+                        <div class="card-icon">📋</div>
+                        <div>
+                            <h2>Terms &amp; Conditions</h2>
+                            <div class="card-subtitle">Effective Date: April 2026 · Governed by applicable law</div>
+                        </div>
+                    </div>
 
-                    <h3>2. Subscription & Payment</h3>
+                    <div class="info-box">
+                        By accessing or using Rawasi's services, you confirm that you have read, understood, and agreed to be bound by these Terms and Conditions. If you do not agree, you must discontinue use immediately.
+                    </div>
+
+                    <h3>1. Definitions</h3>
                     <ul>
-                        <li>Services are offered on a monthly or annual subscription basis.</li>
-                        <li>A limited refund period or trial may be available (e.g., first 7 days), depending on the case.</li>
-                        <li>If you stop paying, the platform may be temporarily suspended, and data may be deleted after a set period (e.g., 30 days).</li>
+                        <li><strong>"Rawasi," "we," "us," or "our"</strong> refers to Rawasi, the provider of the platform and related services.</li>
+                        <li><strong>"Client" or "you"</strong> refers to any individual or entity that subscribes to or uses Rawasi's services.</li>
+                        <li><strong>"Platform"</strong> refers to the custom learning management system (LMS) and associated tools provided by Rawasi.</li>
+                        <li><strong>"Content"</strong> refers to any data, materials, courses, videos, or other information uploaded or created by the Client on the Platform.</li>
+                        <li><strong>"Subscription"</strong> refers to the paid plan granting access to the Platform for a defined billing period.</li>
                     </ul>
 
-                    <h3>3. Service Scope</h3>
+                    <h3>2. Scope of Services</h3>
+                    <p>Rawasi provides a fully hosted, customized learning platform designed for tutors, academies, and trainers. Our services include:</p>
                     <ul>
-                        <li>We provide a fully customized learning platform with direct WhatsApp support.</li>
-                        <li>We commit to customizing the platform according to client needs as agreed.</li>
+                        <li>Initial setup and customization of the learning platform based on agreed specifications.</li>
+                        <li>Hosting, maintenance, and technical infrastructure for the Platform.</li>
+                        <li>Direct customer support via WhatsApp during agreed support hours.</li>
+                        <li>Platform updates and feature improvements at our discretion.</li>
+                    </ul>
+                    <div class="info-box">
+                        Any additional customization or features beyond the agreed scope may be subject to separate fees and a written addendum to this agreement.
+                    </div>
+
+                    <h3>3. Account Registration & Eligibility</h3>
+                    <ul>
+                        <li>You must be at least 18 years of age or have legal capacity to enter into a binding contract to use our services.</li>
+                        <li>You agree to provide accurate, current, and complete information during registration and to keep your account information updated.</li>
+                        <li>You are solely responsible for maintaining the confidentiality of your login credentials and for all activities that occur under your account.</li>
+                        <li>You must notify Rawasi immediately at hello@rawasi.app upon becoming aware of any unauthorized access or use of your account.</li>
                     </ul>
 
-                    <h3>4. Our Responsibility</h3>
+                    <h3>4. Subscription, Billing & Payment</h3>
                     <ul>
-                        <li>We are the service provider and are not responsible for content or outcomes generated on the platform.</li>
-                        <li>We ensure data protection and technical security but cannot guarantee prevention of issues beyond our control.</li>
+                        <li>Services are offered on a <strong>monthly or annual subscription</strong> basis. The applicable fees are those stated at the time of purchase.</li>
+                        <li>Subscriptions automatically renew at the end of each billing cycle unless cancelled in writing at least <strong>5 business days before</strong> the renewal date.</li>
+                        <li>All fees are exclusive of applicable taxes. You are responsible for any taxes, duties, or levies imposed by your jurisdiction.</li>
+                        <li>Rawasi reserves the right to change subscription pricing with <strong>30 days' written notice</strong>. Continued use after the notice period constitutes acceptance of the new pricing.</li>
+                        <li>Payments are non-refundable except as expressly stated in the Refund Policy below.</li>
                     </ul>
 
-                    <h3>5. Intellectual Property</h3>
+                    <h3>5. Service Suspension & Termination</h3>
                     <ul>
-                        <li>The platform, its software, and related materials are owned by Rawasi.</li>
-                        <li>The client owns their data and content created on the platform.</li>
+                        <li><strong>By Client:</strong> You may terminate your subscription at any time by providing written notice to hello@rawasi.app. Termination takes effect at the end of the current billing period.</li>
+                        <li><strong>By Rawasi:</strong> We may suspend or terminate your access immediately if you breach these Terms, fail to make payment, or engage in any conduct that we reasonably believe is harmful to other users, third parties, or Rawasi.</li>
+                        <li><strong>Suspension for non-payment:</strong> If a payment fails, we will notify you and provide a <strong>7-day grace period</strong> to resolve the outstanding balance. Failure to do so will result in platform suspension.</li>
+                        <li><strong>Data retention after termination:</strong> Upon termination, your data will be retained for <strong>30 calendar days</strong>, during which you may request an export. After this period, all data will be permanently and irreversibly deleted.</li>
+                    </ul>
+                    <div class="warning-box">
+                        ⚠️ We strongly recommend exporting your data before the end of the 30-day retention window. Rawasi bears no liability for data lost after this period.
+                    </div>
+
+                    <h3>6. Client Obligations & Acceptable Use</h3>
+                    <p>You agree to use the Platform in compliance with all applicable laws and regulations and expressly agree <strong>not</strong> to:</p>
+                    <ul>
+                        <li>Upload, distribute, or transmit any Content that is unlawful, defamatory, harassing, fraudulent, or infringes upon any third party's intellectual property rights.</li>
+                        <li>Use the Platform to engage in any activity that violates applicable data protection or privacy laws.</li>
+                        <li>Attempt to gain unauthorized access to any portion of the Platform or its related systems.</li>
+                        <li>Reverse engineer, decompile, or disassemble any aspect of the Platform software.</li>
+                        <li>Resell, sublicense, or transfer access to the Platform to any third party without prior written consent from Rawasi.</li>
+                        <li>Use the Platform in a manner that could damage, disable, or impair its performance or availability.</li>
+                    </ul>
+                    <p>Rawasi reserves the right to remove any Content and/or suspend access immediately upon discovering a violation of this section.</p>
+
+                    <h3>7. Intellectual Property Rights</h3>
+                    <ul>
+                        <li><strong>Rawasi's IP:</strong> The Platform, its software, codebase, design, features, trademarks, and all associated documentation are the exclusive intellectual property of Rawasi. No rights are granted to you except as expressly provided in these Terms.</li>
+                        <li><strong>Client's IP:</strong> You retain full ownership of all Content you create or upload to the Platform. By uploading Content, you grant Rawasi a limited, non-exclusive, royalty-free licence solely to host, display, and deliver that Content as necessary to provide the services.</li>
+                        <li>You represent and warrant that you have all rights necessary to grant the licence above and that your Content does not infringe any third-party rights.</li>
                     </ul>
 
-                    <h3>6. User Obligations</h3>
+                    <h3>8. Data Protection & Privacy</h3>
                     <ul>
-                        <li>Use the platform legally and responsibly.</li>
-                        <li>Do not share login credentials with third parties.</li>
-                        <li>Do not use the platform for unlawful or unethical purposes.</li>
+                        <li>Rawasi is committed to protecting your personal data in accordance with our <a href="privacy-policy" style="color: var(--primary);">Privacy Policy</a>, which is incorporated into these Terms by reference.</li>
+                        <li>You are responsible for ensuring that your collection and processing of your users' personal data through the Platform complies with all applicable data protection laws.</li>
+                        <li>Rawasi acts as a data processor on your behalf with respect to your users' data. You are the data controller and must maintain appropriate legal bases for processing.</li>
                     </ul>
 
-                    <h3>7. Limitation of Liability</h3>
+                    <h3>9. Disclaimer of Warranties</h3>
+                    <p>The Platform is provided <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> without warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement. Rawasi does not warrant that:</p>
                     <ul>
-                        <li>Rawasi is not liable for any direct or indirect losses resulting from the use of the platform.</li>
-                        <li>No guarantees are made regarding profits or educational outcomes.</li>
+                        <li>The Platform will be uninterrupted, error-free, or secure at all times.</li>
+                        <li>Any defects or errors will be corrected within a specific timeframe.</li>
+                        <li>The Platform will meet all of your specific business requirements.</li>
                     </ul>
 
-                    <h3>8. Changes</h3>
-                    <p>
-                        We reserve the right to modify these Terms at any time. New terms apply once posted on the website.
-                    </p>
-
-                    <h3>9. Governing Law & Jurisdiction</h3>
-                    <p>
-                        These Terms are governed by the laws of the country where the service provider resides. Any dispute will be resolved in the competent courts.
-                    </p>
-
-                    <h3>10. Contact Us</h3>
-                    <p>
-                        For any inquiries regarding these Terms, please contact us via:
+                    <h3>10. Limitation of Liability</h3>
+                    <p>To the maximum extent permitted by applicable law, Rawasi, its directors, employees, and agents shall not be liable for any:</p>
                     <ul>
-                        <li>WhatsApp: +20 123 456 7890</li>
-                        <li>Email: hello@rawasi.app</li>
+                        <li>Indirect, incidental, special, consequential, or punitive damages.</li>
+                        <li>Loss of profits, revenue, data, goodwill, or business opportunities.</li>
+                        <li>Damages resulting from unauthorized access to your account or data.</li>
+                        <li>Service interruptions caused by circumstances beyond Rawasi's reasonable control (force majeure), including natural disasters, government actions, internet outages, or third-party failures.</li>
                     </ul>
-                    </p>
+                    <p>In any case, Rawasi's total aggregate liability shall not exceed the total fees paid by you in the <strong>3 months immediately preceding</strong> the event giving rise to the claim.</p>
+
+                    <h3>11. Indemnification</h3>
+                    <p>You agree to indemnify, defend, and hold harmless Rawasi and its affiliates from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in connection with your use of the Platform, your Content, or your breach of these Terms.</p>
+
+                    <h3>12. Modifications to Terms</h3>
+                    <p>Rawasi reserves the right to modify these Terms at any time. We will provide <strong>at least 14 days' notice</strong> of material changes via email or a notice on the Platform. Your continued use of the Platform after the effective date of changes constitutes your acceptance. If you do not agree to the revised Terms, you must terminate your subscription before the effective date.</p>
+
+                    <h3>13. Governing Law & Dispute Resolution</h3>
+                    <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Rawasi is legally registered. Any dispute arising under or in connection with these Terms shall be subject to the exclusive jurisdiction of the competent courts of that jurisdiction. Prior to initiating formal proceedings, both parties agree to attempt to resolve any dispute through good-faith negotiation for a period of <strong>30 days</strong>.</p>
+
+                    <h3>14. Severability</h3>
+                    <p>If any provision of these Terms is found to be invalid or unenforceable, that provision shall be severed, and the remaining provisions shall continue in full force and effect.</p>
+
+                    <h3>15. Entire Agreement</h3>
+                    <p>These Terms, together with the Privacy Policy and any written service agreement or addendum, constitute the entire agreement between you and Rawasi regarding the subject matter herein and supersede all prior or contemporaneous agreements.</p>
+
+                    <h3>16. Contact</h3>
+                    <p>For any questions regarding these Terms, please contact us:</p>
+                    <ul>
+                        <li>📧 Email: <a href="mailto:hello@rawasi.app" style="color: var(--primary);">hello@rawasi.app</a></li>
+                        <li>💬 WhatsApp: +20 123 456 7890</li>
+                    </ul>
                 </div>
 
-                <!-- ARABIC CONTENT -->
+                <!-- ARABIC -->
                 <div class="policy-content-ar" data-lang-content="ar" style="display: none;">
-                    <h3>1. المقدمة</h3>
-                    <p>
-                        هذه الشروط والأحكام تحدد حقوقك والتزاماتك عند استخدام خدمات رواسي لإنشاء وتشغيل منصات تعليمية مخصصة.
-                    </p>
+                    <div class="card-header">
+                        <div class="card-icon">📋</div>
+                        <div>
+                            <h2>الشروط والأحكام</h2>
+                            <div class="card-subtitle">تاريخ السريان: أبريل 2026 · يخضع للقوانين المعمول بها</div>
+                        </div>
+                    </div>
 
-                    <h3>2. الاشتراك والدفع</h3>
+                    <div class="info-box">
+                        باستخدامك لخدمات رواسي أو الوصول إليها، فإنك تؤكد أنك قرأت هذه الشروط وفهمتها ووافقت على الالتزام بها. إن كنت لا توافق على أي منها، يتعين عليك التوقف فورًا عن استخدام الخدمة.
+                    </div>
+
+                    <h3>1. التعريفات</h3>
                     <ul>
-                        <li>الخدمات متاحة على أساس اشتراك شهري أو سنوي.</li>
-                        <li>قد نعرض فترة تجريبية قصيرة أو سياسة استرداد محدودة (مثلاً خلال أول 7 أيام) حسب الحالة.</li>
-                        <li>في حالة توقفك عن الدفع، قد نقوم بتعليق المنصة مؤقتًا، ويمكن حذف البيانات بعد فترة محددة (مثلاً 30 يومًا من التعليق).</li>
+                        <li><strong>"رواسي" أو "نحن" أو "لنا"</strong>: يُقصد به رواسي، مزود المنصة والخدمات المرتبطة بها.</li>
+                        <li><strong>"العميل" أو "أنت"</strong>: يُقصد به أي شخص طبيعي أو اعتباري يشترك في خدمات رواسي أو يستخدمها.</li>
+                        <li><strong>"المنصة"</strong>: نظام إدارة التعلم (LMS) المخصص والأدوات المرتبطة به التي تقدمها رواسي.</li>
+                        <li><strong>"المحتوى"</strong>: أي بيانات أو مواد أو دورات أو مقاطع فيديو أو معلومات أخرى يرفعها العميل أو ينشئها على المنصة.</li>
+                        <li><strong>"الاشتراك"</strong>: الباقة المدفوعة التي تمنح صلاحية الوصول إلى المنصة لفترة فوترة محددة.</li>
                     </ul>
 
-                    <h3>3. نطاق الخدمة</h3>
+                    <h3>2. نطاق الخدمات</h3>
+                    <p>تُقدّم رواسي منصة تعليمية مُستضافة ومُخصصة بالكامل للمعلمين والأكاديميات والمدربين، وتشمل خدماتنا:</p>
                     <ul>
-                        <li>نقدم منصة تعليمية مخصصة ومتكاملة مع دعم مباشر عبر واتساب.</li>
-                        <li>نلتزم بتخصيص المنصة وفق احتياجات العميل كما تم الاتفاق عليه.</li>
+                        <li>إعداد المنصة وتخصيصها وفق المواصفات المتفق عليها.</li>
+                        <li>استضافة المنصة وصيانتها والبنية التحتية التقنية اللازمة لها.</li>
+                        <li>دعم العملاء المباشر عبر واتساب خلال ساعات الدعم المتفق عليها.</li>
+                        <li>تحديثات المنصة وتحسينات الميزات وفق تقديرنا.</li>
+                    </ul>
+                    <div class="info-box">
+                        أي تخصيصات أو ميزات إضافية تتجاوز النطاق المتفق عليه قد تخضع لرسوم منفصلة وملحق خطي بهذه الاتفاقية.
+                    </div>
+
+                    <h3>3. تسجيل الحساب وأهلية الاستخدام</h3>
+                    <ul>
+                        <li>يجب أن يكون عمرك 18 عامًا على الأقل أو أن تتمتع بالأهلية القانونية لإبرام عقد ملزم.</li>
+                        <li>توافق على تقديم معلومات دقيقة وكاملة عند التسجيل وتحديثها باستمرار.</li>
+                        <li>أنت المسؤول الوحيد عن الحفاظ على سرية بيانات الدخول وعن جميع الأنشطة التي تجري تحت حسابك.</li>
+                        <li>يجب إخطار رواسي فورًا على hello@rawasi.app عند اكتشاف أي وصول غير مصرح به لحسابك.</li>
                     </ul>
 
-                    <h3>4. مسؤوليتنا</h3>
+                    <h3>4. الاشتراك والفوترة والدفع</h3>
                     <ul>
-                        <li>نحن مزود الخدمة ولا نتحمل مسؤولية المحتوى أو النتائج التي يتم إنشاؤها على المنصة.</li>
-                        <li>نضمن حماية البيانات والأمن التقني، لكن لا نضمن عدم حدوث مشاكل تقنية خارجة عن إرادتنا.</li>
+                        <li>تُقدَّم الخدمات على أساس <strong>اشتراك شهري أو سنوي</strong>. الرسوم المطبقة هي تلك المُعلنة وقت الشراء.</li>
+                        <li>تتجدد الاشتراكات تلقائيًا في نهاية كل دورة فوترة ما لم يُلغَ الاشتراك كتابيًا قبل <strong>5 أيام عمل على الأقل</strong> من تاريخ التجديد.</li>
+                        <li>جميع الرسوم لا تشمل الضرائب المطبقة. أنت المسؤول عن أي ضرائب أو رسوم جمركية تفرضها جهتك القضائية.</li>
+                        <li>تحتفظ رواسي بحق تغيير أسعار الاشتراكات مع <strong>إشعار كتابي مسبق مدته 30 يومًا</strong>. يُعدّ الاستمرار في الاستخدام بعد انتهاء فترة الإشعار قبولًا بالأسعار الجديدة.</li>
+                        <li>المدفوعات غير قابلة للاسترداد إلا كما هو منصوص عليه صراحةً في سياسة الاسترداد أدناه.</li>
                     </ul>
 
-                    <h3>5. حقوق الملكية</h3>
+                    <h3>5. تعليق الخدمة وإنهاؤها</h3>
                     <ul>
-                        <li>المنصة وبرمجياتها وأي مواد مرتبطة بها مملوكة لرواسي.</li>
-                        <li>العميل يمتلك بياناته والمحتوى الذي ينشئه على المنصة.</li>
+                        <li><strong>من قِبَل العميل:</strong> يمكنك إنهاء اشتراكك في أي وقت بإرسال إشعار كتابي إلى hello@rawasi.app. يسري الإنهاء في نهاية دورة الفوترة الحالية.</li>
+                        <li><strong>من قِبَل رواسي:</strong> يحق لنا تعليق أو إنهاء وصولك فورًا في حال مخالفة هذه الشروط أو التخلف عن السداد أو القيام بأي سلوك نراه ضارًا بالمستخدمين أو الأطراف الثالثة أو رواسي.</li>
+                        <li><strong>التعليق بسبب عدم السداد:</strong> في حال فشل السداد، سنُبلّغك ونمنحك <strong>مهلة 7 أيام</strong> لتسوية الرصيد المستحق. عدم التسوية يؤدي إلى تعليق المنصة.</li>
+                        <li><strong>الاحتفاظ بالبيانات بعد الإنهاء:</strong> تُحتفظ ببياناتك لمدة <strong>30 يومًا تقويميًا</strong> من تاريخ الإنهاء، وخلالها يمكنك طلب تصديرها. بعد هذه المدة تُحذف البيانات بشكل نهائي وغير قابل للاسترداد.</li>
+                    </ul>
+                    <div class="warning-box">
+                        ⚠️ نوصي بشدة بتصدير بياناتك قبل انتهاء فترة الاحتفاظ البالغة 30 يومًا. لا تتحمل رواسي أي مسؤولية عن البيانات المفقودة بعد هذه المدة.
+                    </div>
+
+                    <h3>6. التزامات العميل والاستخدام المقبول</h3>
+                    <p>توافق على استخدام المنصة وفق جميع القوانين واللوائح المعمول بها، وتوافق صراحةً على <strong>عدم</strong> القيام بما يلي:</p>
+                    <ul>
+                        <li>رفع أو توزيع أو نقل أي محتوى غير قانوني أو تشهيري أو مضايق أو احتيالي أو ينتهك حقوق الملكية الفكرية لأطراف ثالثة.</li>
+                        <li>استخدام المنصة في أنشطة تنتهك قوانين حماية البيانات أو الخصوصية المعمول بها.</li>
+                        <li>محاولة الوصول غير المصرح به إلى أي جزء من المنصة أو أنظمتها.</li>
+                        <li>إجراء هندسة عكسية أو فك تشفير أو تفكيك أي جانب من برمجيات المنصة.</li>
+                        <li>إعادة بيع أو ترخيص أو نقل الوصول إلى المنصة لأطراف ثالثة دون موافقة كتابية مسبقة من رواسي.</li>
+                        <li>استخدام المنصة بأي طريقة قد تُضرّ بأدائها أو توفرها أو تُعيقها.</li>
                     </ul>
 
-                    <h3>6. التزامات المستخدم</h3>
+                    <h3>7. حقوق الملكية الفكرية</h3>
                     <ul>
-                        <li>استخدام المنصة بشكل قانوني ومسؤول.</li>
-                        <li>عدم مشاركة بيانات الدخول أو الوصول مع أطراف ثالثة.</li>
-                        <li>عدم استخدام المنصة لأي أغراض غير قانونية أو مخالفة للأخلاق.</li>
+                        <li><strong>ملكية رواسي الفكرية:</strong> المنصة وبرمجياتها وتصميمها وميزاتها وعلاماتها التجارية وجميع الوثائق المرتبطة بها هي الملكية الفكرية الحصرية لرواسي. لا تُمنح لك أي حقوق إلا كما هو منصوص عليه صراحةً في هذه الشروط.</li>
+                        <li><strong>ملكية العميل الفكرية:</strong> تحتفظ بالملكية الكاملة لجميع المحتويات التي تنشئها أو ترفعها على المنصة. برفع المحتوى، تمنح رواسي ترخيصًا محدودًا غير حصري وغير قابل للتحويل لاستضافة وعرض وتسليم ذلك المحتوى بالقدر اللازم لتقديم الخدمات فحسب.</li>
+                        <li>تُقرّ وتضمن أن لديك جميع الحقوق اللازمة لمنح الترخيص المذكور وأن محتواك لا ينتهك أي حقوق لأطراف ثالثة.</li>
                     </ul>
 
-                    <h3>7. حدود المسؤولية</h3>
+                    <h3>8. حماية البيانات والخصوصية</h3>
                     <ul>
-                        <li>رواسي غير مسؤولة عن أي خسائر مباشرة أو غير مباشرة نتيجة استخدام المنصة.</li>
-                        <li>لا نقدم ضمانات للربح أو النتائج التعليمية.</li>
+                        <li>تلتزم رواسي بحماية بياناتك الشخصية وفق <a href="privacy-policy" style="color: var(--primary);">سياسة الخصوصية</a> الخاصة بنا، والتي تُعدّ جزءًا لا يتجزأ من هذه الشروط.</li>
+                        <li>أنت مسؤول عن ضمان امتثال جمع بيانات مستخدميك ومعالجتها عبر المنصة لجميع قوانين حماية البيانات المعمول بها.</li>
+                        <li>تعمل رواسي بوصفها معالجًا للبيانات نيابةً عنك فيما يخص بيانات مستخدميك، فيما تُعدّ أنت المتحكم في البيانات.</li>
                     </ul>
 
-                    <h3>8. التغييرات</h3>
-                    <p>
-                        نحتفظ بالحق في تعديل هذه الشروط في أي وقت. سيتم تطبيق الشروط الجديدة بمجرد نشرها على الموقع.
-                    </p>
-
-                    <h3>9. القانون المطبق والاختصاص القضائي</h3>
-                    <p>
-                        تخضع هذه الشروط للقوانين المعمول بها في الدولة التي يقيم فيها مقدم الخدمة. أي نزاع يتم حله أمام المحاكم المختصة.
-                    </p>
-
-                    <h3>10. الاتصال بنا</h3>
-                    <p>
-                        لأي استفسارات حول الشروط والأحكام، يرجى التواصل عبر:
+                    <h3>9. إخلاء مسؤولية الضمانات</h3>
+                    <p>تُقدَّم المنصة <strong>"كما هي"</strong> و<strong>"حسب التوفر"</strong> دون ضمانات من أي نوع، صريحة كانت أم ضمنية. لا تضمن رواسي:</p>
                     <ul>
-                        <li>واتساب: +20 123 456 7890</li>
-                        <li>البريد الإلكتروني: hello@rawasi.app</li>
+                        <li>عمل المنصة دون انقطاع أو أخطاء أو أن تكون آمنة في جميع الأوقات.</li>
+                        <li>تصحيح أي أعطال أو أخطاء في إطار زمني محدد.</li>
+                        <li>تلبية المنصة لجميع متطلباتك التجارية المحددة.</li>
                     </ul>
-                    </p>
+
+                    <h3>10. تحديد المسؤولية</h3>
+                    <p>بالقدر الأقصى المسموح به قانونًا، لن تكون رواسي ومديروها وموظفوها ووكلاؤها مسؤولين عن أي:</p>
+                    <ul>
+                        <li>أضرار غير مباشرة أو عرضية أو خاصة أو تبعية أو عقابية.</li>
+                        <li>خسارة في الأرباح أو الإيرادات أو البيانات أو الشهرة أو الفرص التجارية.</li>
+                        <li>أضرار ناجمة عن الوصول غير المصرح به لحسابك أو بياناتك.</li>
+                        <li>انقطاعات الخدمة الناجمة عن ظروف خارجة عن سيطرة رواسي (قوة قاهرة).</li>
+                    </ul>
+                    <p>في جميع الأحوال، لن تتجاوز المسؤولية الإجمالية لرواسي إجمالي الرسوم التي دفعتها خلال <strong>الأشهر الثلاثة السابقة</strong> للحادثة المُثيرة للمطالبة.</p>
+
+                    <h3>11. التعويض</h3>
+                    <p>توافق على تعويض رواسي وشركاتها التابعة والدفاع عنها وإبراء ذمتها من أي مطالبات أو مسؤوليات أو أضرار أو خسائر ونفقات (بما فيها أتعاب المحامين المعقولة) الناشئة عن استخدامك للمنصة أو محتواك أو خرقك لهذه الشروط.</p>
+
+                    <h3>12. التعديلات على الشروط</h3>
+                    <p>تحتفظ رواسي بالحق في تعديل هذه الشروط في أي وقت. سنقدم <strong>إشعارًا مسبقًا مدته 14 يومًا على الأقل</strong> للتغييرات الجوهرية عبر البريد الإلكتروني أو إشعار على المنصة. استمرارك في استخدام المنصة بعد تاريخ السريان يُعدّ قبولًا منك للشروط المعدَّلة.</p>
+
+                    <h3>13. القانون الحاكم وحل النزاعات</h3>
+                    <p>تخضع هذه الشروط وتُفسَّر وفق قوانين الجهة القضائية التي تتخذ فيها رواسي مقرًا قانونيًا. أي نزاع يخضع للاختصاص القضائي الحصري لمحاكم تلك الجهة. قبل البدء في أي إجراءات رسمية، يوافق الطرفان على السعي لحل النزاع عبر مفاوضات حسن النية لمدة <strong>30 يومًا</strong>.</p>
+
+                    <h3>14. قابلية الفصل</h3>
+                    <p>إن وُجد أي بند من هذه الشروط غير صالح أو غير قابل للتنفيذ، يُفصل ذلك البند وتظل سائر البنود نافذة وسارية المفعول.</p>
+
+                    <h3>15. الاتفاقية الكاملة</h3>
+                    <p>تُشكّل هذه الشروط مع سياسة الخصوصية وأي اتفاقية خدمة خطية أو ملحق الاتفاقية الكاملة بين أنت ورواسي بشأن موضوعها، وتحلّ محل جميع الاتفاقيات السابقة.</p>
+
+                    <h3>16. التواصل معنا</h3>
+                    <p>لأي استفسارات حول هذه الشروط، يرجى التواصل:</p>
+                    <ul>
+                        <li>📧 البريد الإلكتروني: <a href="mailto:hello@rawasi.app" style="color: var(--primary);">hello@rawasi.app</a></li>
+                        <li>💬 واتساب: +20 123 456 7890</li>
+                    </ul>
                 </div>
             </div>
+
+            <!-- ==================== REFUND POLICY ==================== -->
+            <div class="legal-card" id="refund-card">
+                <!-- ENGLISH -->
+                <div class="policy-content-en" data-lang-content="en">
+                    <div class="card-header">
+                        <div class="card-icon">💳</div>
+                        <div>
+                            <h2>Refund Policy</h2>
+                            <div class="card-subtitle">Effective Date: April 2026</div>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        This Refund Policy forms part of and should be read together with the Terms &amp; Conditions above. By subscribing to Rawasi's services, you agree to this policy.
+                    </div>
+
+                    <h3>1. General Principle</h3>
+                    <p>All subscription fees paid to Rawasi are generally <strong>non-refundable</strong>, except as expressly described in this policy. We encourage all prospective clients to contact us via WhatsApp before subscribing to ask questions and assess whether our services meet their needs.</p>
+
+                    <h3>2. Refund Eligibility</h3>
+                    <p>Refunds may be considered under the following circumstances:</p>
+
+                    <table class="refund-table">
+                        <thead>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>Eligibility</th>
+                            <th>Amount</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Cancellation within <strong>7 days</strong> of first subscription (no Platform use)</td>
+                            <td><span class="badge badge-green">Eligible</span></td>
+                            <td>Full refund</td>
+                        </tr>
+                        <tr>
+                            <td>Service not delivered as agreed (Rawasi's fault)</td>
+                            <td><span class="badge badge-green">Eligible</span></td>
+                            <td>Pro-rata refund</td>
+                        </tr>
+                        <tr>
+                            <td>Cancellation within 7 days but Platform has been used</td>
+                            <td><span class="badge badge-yellow">Case-by-case</span></td>
+                            <td>Partial refund</td>
+                        </tr>
+                        <tr>
+                            <td>Cancellation after 7 days of first subscription</td>
+                            <td><span class="badge badge-red">Not eligible</span></td>
+                            <td>No refund</td>
+                        </tr>
+                        <tr>
+                            <td>Subscription renewal (auto-renewed)</td>
+                            <td><span class="badge badge-red">Not eligible</span></td>
+                            <td>No refund</td>
+                        </tr>
+                        <tr>
+                            <td>Account terminated for Terms violation</td>
+                            <td><span class="badge badge-red">Not eligible</span></td>
+                            <td>No refund</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>3. 7-Day Money-Back Guarantee (New Subscribers Only)</h3>
+                    <p>New subscribers who have <strong>not yet used or configured</strong> their Platform may request a full refund within <strong>7 calendar days</strong> of their initial payment. To qualify:</p>
+                    <ul>
+                        <li>The request must be submitted in writing to hello@rawasi.app within the 7-day window.</li>
+                        <li>The Platform must not have been actively used, customized, or launched.</li>
+                        <li>This guarantee applies only to the <strong>first subscription</strong> and cannot be claimed more than once per client.</li>
+                    </ul>
+
+                    <h3>4. Service Failure Refunds</h3>
+                    <p>If Rawasi fails to deliver a material feature or service that was explicitly agreed upon in writing, you may be entitled to a <strong>pro-rata refund</strong> for the period during which the agreed service was not delivered. To request such a refund:</p>
+                    <ul>
+                        <li>Submit a written complaint to hello@rawasi.app with supporting evidence of the service failure.</li>
+                        <li>Rawasi will investigate and respond within <strong>10 business days</strong>.</li>
+                        <li>If validated, the refund will be processed within <strong>14 business days</strong> of approval.</li>
+                    </ul>
+
+                    <h3>5. Non-Refundable Items</h3>
+                    <p>The following are explicitly non-refundable under any circumstances:</p>
+                    <ul>
+                        <li>Setup fees, onboarding fees, or one-time customization charges.</li>
+                        <li>Any fees paid for add-on features or custom development work.</li>
+                        <li>Partial months or unused days within a billing period.</li>
+                        <li>Fees for periods during which the Platform was suspended due to your breach of these Terms.</li>
+                    </ul>
+
+                    <h3>6. How to Request a Refund</h3>
+                    <p>To initiate a refund request:</p>
+                    <ol>
+                        <li>Email <strong>hello@rawasi.app</strong> with the subject line: <em>"Refund Request – [Your Account Name]"</em></li>
+                        <li>Include your full name, registered email address, subscription start date, and reason for the refund request.</li>
+                        <li>Attach any relevant supporting documentation.</li>
+                    </ol>
+                    <p>Rawasi will acknowledge your request within <strong>3 business days</strong> and provide a final decision within <strong>10 business days</strong>.</p>
+
+                    <h3>7. Refund Processing</h3>
+                    <ul>
+                        <li>Approved refunds will be returned to the <strong>original payment method</strong> used at the time of purchase.</li>
+                        <li>Processing times may vary depending on your bank or payment provider (typically 5–14 business days).</li>
+                        <li>Rawasi is not responsible for delays caused by financial institutions or payment processors.</li>
+                        <li>Refunds are issued in the same currency as the original transaction.</li>
+                    </ul>
+
+                    <div class="success-box">
+                        ✅ We are committed to fair and transparent handling of all refund requests. If you have any concerns, please reach out to us directly before escalating.
+                    </div>
+
+                    <h3>8. Contact for Refund Inquiries</h3>
+                    <ul>
+                        <li>📧 Email: <a href="mailto:hello@rawasi.app" style="color: var(--primary);">hello@rawasi.app</a></li>
+                        <li>💬 WhatsApp: +20 123 456 7890</li>
+                    </ul>
+                </div>
+
+                <!-- ARABIC -->
+                <div class="policy-content-ar" data-lang-content="ar" style="display: none;">
+                    <div class="card-header">
+                        <div class="card-icon">💳</div>
+                        <div>
+                            <h2>سياسة الاسترداد</h2>
+                            <div class="card-subtitle">تاريخ السريان: أبريل 2026</div>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        تُعدّ سياسة الاسترداد هذه جزءًا لا يتجزأ من الشروط والأحكام أعلاه ويجب قراءتها بالتزامن معها. باشتراكك في خدمات رواسي، فإنك توافق على هذه السياسة.
+                    </div>
+
+                    <h3>1. المبدأ العام</h3>
+                    <p>جميع رسوم الاشتراك المدفوعة لرواسي <strong>غير قابلة للاسترداد</strong> بوجه عام، إلا كما هو منصوص عليه صراحةً في هذه السياسة. نشجع جميع العملاء المحتملين على التواصل معنا عبر واتساب قبل الاشتراك لطرح الأسئلة والتحقق من ملاءمة خدماتنا لاحتياجاتهم.</p>
+
+                    <h3>2. شروط الاسترداد</h3>
+                    <p>قد يُنظر في طلبات الاسترداد في الحالات التالية:</p>
+
+                    <table class="refund-table">
+                        <thead>
+                        <tr>
+                            <th>السيناريو</th>
+                            <th>الأهلية</th>
+                            <th>المبلغ</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>الإلغاء خلال <strong>7 أيام</strong> من الاشتراك الأول (دون استخدام المنصة)</td>
+                            <td><span class="badge badge-green">مؤهّل</span></td>
+                            <td>استرداد كامل</td>
+                        </tr>
+                        <tr>
+                            <td>عدم تقديم الخدمة كما تم الاتفاق (خطأ رواسي)</td>
+                            <td><span class="badge badge-green">مؤهّل</span></td>
+                            <td>استرداد نسبي</td>
+                        </tr>
+                        <tr>
+                            <td>الإلغاء خلال 7 أيام لكن مع استخدام المنصة</td>
+                            <td><span class="badge badge-yellow">دراسة حالة بحالة</span></td>
+                            <td>استرداد جزئي</td>
+                        </tr>
+                        <tr>
+                            <td>الإلغاء بعد 7 أيام من الاشتراك الأول</td>
+                            <td><span class="badge badge-red">غير مؤهّل</span></td>
+                            <td>لا استرداد</td>
+                        </tr>
+                        <tr>
+                            <td>تجديد الاشتراك التلقائي</td>
+                            <td><span class="badge badge-red">غير مؤهّل</span></td>
+                            <td>لا استرداد</td>
+                        </tr>
+                        <tr>
+                            <td>إنهاء الحساب بسبب مخالفة الشروط</td>
+                            <td><span class="badge badge-red">غير مؤهّل</span></td>
+                            <td>لا استرداد</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>3. ضمان استرداد المال خلال 7 أيام (للمشتركين الجدد فقط)</h3>
+                    <p>يحق للمشتركين الجدد الذين <strong>لم يستخدموا أو يُهيئوا</strong> منصتهم بعد، طلب استرداد كامل خلال <strong>7 أيام تقويمية</strong> من الدفع الأولي. شروط الاستحقاق:</p>
+                    <ul>
+                        <li>يجب تقديم الطلب كتابيًا إلى hello@rawasi.app خلال فترة الـ 7 أيام.</li>
+                        <li>يجب ألا تكون المنصة قد استُخدمت أو خُصِّصت أو أُطلقت فعليًا.</li>
+                        <li>ينطبق هذا الضمان على <strong>الاشتراك الأول</strong> فقط ولا يمكن المطالبة به أكثر من مرة واحدة لكل عميل.</li>
+                    </ul>
+
+                    <h3>4. الاسترداد في حالات إخفاق الخدمة</h3>
+                    <p>إن أخفقت رواسي في تقديم ميزة أو خدمة جوهرية تم الاتفاق عليها كتابيًا، فقد يحق لك الحصول على <strong>استرداد نسبي</strong> عن الفترة التي لم تُقدَّم فيها الخدمة المتفق عليها. لتقديم طلب الاسترداد:</p>
+                    <ul>
+                        <li>أرسل شكوى كتابية إلى hello@rawasi.app مرفقًا بها أدلة داعمة على إخفاق الخدمة.</li>
+                        <li>ستتحقق رواسي من الشكوى وترد خلال <strong>10 أيام عمل</strong>.</li>
+                        <li>عند التحقق من الشكوى، تتم معالجة الاسترداد خلال <strong>14 يوم عمل</strong> من الموافقة.</li>
+                    </ul>
+
+                    <h3>5. المبالغ غير القابلة للاسترداد</h3>
+                    <p>لا يُسترد ما يلي تحت أي ظرف:</p>
+                    <ul>
+                        <li>رسوم الإعداد والتأهيل أو رسوم التخصيص لمرة واحدة.</li>
+                        <li>أي رسوم مدفوعة مقابل ميزات إضافية أو أعمال تطوير مخصصة.</li>
+                        <li>أجزاء الأشهر أو الأيام غير المستخدمة ضمن دورة الفوترة.</li>
+                        <li>الرسوم المدفوعة عن فترات تعليق المنصة بسبب خرقك لهذه الشروط.</li>
+                    </ul>
+
+                    <h3>6. كيفية تقديم طلب الاسترداد</h3>
+                    <p>لبدء طلب الاسترداد:</p>
+                    <ol>
+                        <li>أرسل بريدًا إلكترونيًا إلى <strong>hello@rawasi.app</strong> بعنوان: <em>"طلب استرداد – [اسم حسابك]"</em></li>
+                        <li>أدرج اسمك الكامل وعنوان البريد الإلكتروني المسجل وتاريخ بدء الاشتراك وسبب طلب الاسترداد.</li>
+                        <li>أرفق أي وثائق داعمة ذات صلة.</li>
+                    </ol>
+                    <p>ستؤكد رواسي استلام طلبك خلال <strong>3 أيام عمل</strong> وستُقدم قرارها النهائي خلال <strong>10 أيام عمل</strong>.</p>
+
+                    <h3>7. معالجة الاسترداد</h3>
+                    <ul>
+                        <li>تُعاد المبالغ المستردة المعتمدة إلى <strong>وسيلة الدفع الأصلية</strong> المستخدمة عند الشراء.</li>
+                        <li>قد تتفاوت أوقات المعالجة حسب البنك أو مزود الدفع (عادةً 5 إلى 14 يوم عمل).</li>
+                        <li>لا تتحمل رواسي المسؤولية عن التأخيرات الناجمة عن المؤسسات المالية أو معالجات الدفع.</li>
+                        <li>تُصدر المبالغ المستردة بنفس عملة المعاملة الأصلية.</li>
+                    </ul>
+
+                    <div class="success-box">
+                        ✅ نلتزم بالتعامل العادل والشفاف مع جميع طلبات الاسترداد. إن كان لديك أي استفسار، نرجو التواصل معنا مباشرةً قبل التصعيد.
+                    </div>
+
+                    <h3>8. التواصل بشأن استفسارات الاسترداد</h3>
+                    <ul>
+                        <li>📧 البريد الإلكتروني: <a href="mailto:hello@rawasi.app" style="color: var(--primary);">hello@rawasi.app</a></li>
+                        <li>💬 واتساب: +20 123 456 7890</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </section>
 </main>
@@ -516,38 +887,34 @@
                     <a href="https://www.instagram.com/rawasi.platform/" class="social-link"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-
-            <div class="footer-links">
+            <div>
                 <h3 class="footer-heading" data-i18n="footer_links2">Resources</h3>
                 <ul class="footer-links">
                     <li><a href="privacy-policy" class="footer-link" data-i18n="footer_link5">Privacy Policy</a></li>
                     <li><a href="terms-and-conditions" class="footer-link" data-i18n="footer_link6">Terms and Conditions</a></li>
                 </ul>
             </div>
-
-            <div class="footer-links">
-                <h3 class="footer-heading" data-i18n="footer_links2">Resources</h3>
+            <div>
+                <h3 class="footer-heading" data-i18n="footer_links2">Support</h3>
                 <ul class="footer-links">
-                    <li><a href="#" class="footer-link" data-i18n="footer_link5">FAQ</a></li>
-                    <li><a href="#" class="footer-link" data-i18n="footer_link6">WhatsApp Support</a></li>
+                    <li><a href="#" class="footer-link">FAQ</a></li>
+                    <li><a href="https://wa.me/201013190522" class="footer-link">WhatsApp Support</a></li>
                 </ul>
             </div>
-
             <div class="footer-contact">
                 <h3 class="footer-heading" data-i18n="footer_contact">Contact Us</h3>
-                <p><span class="material-symbols-outlined icon">chat</span> <span data-i18n="footer_whatsapp">WhatsApp: +20 123 456 7890</span></p>
-                <p><span class="material-symbols-outlined icon">mail</span> <span data-i18n="footer_email">hello@rawasi.app</span></p>
+                <p><span class="material-symbols-outlined icon">chat</span> <span>+20 123 456 7890</span></p>
+                <p><span class="material-symbols-outlined icon">mail</span> <span>hello@rawasi.app</span></p>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <p>&copy; <span data-i18n="footer_copyright">2026 Rawasi. All rights reserved.</span> | <a href="#" class="footer-link" data-i18n="footer_privacy">Privacy Policy</a> | <a href="#" class="footer-link" data-i18n="footer_terms">Terms</a></p>
+            <p>&copy; 2026 Rawasi. All rights reserved. | <a href="privacy-policy" class="footer-link">Privacy Policy</a> | <a href="terms-and-conditions" class="footer-link">Terms</a></p>
         </div>
     </div>
 </footer>
+
 <script src="assets/js/localization.js"></script>
 <script>
-
     let currentLang = localStorage.getItem('rawasi-lang') || 'en';
 
     function updatePageLanguage(lang) {
@@ -556,18 +923,19 @@
         document.documentElement.lang = lang;
         document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
-                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                    el.value = translations[lang][key];
-                } else {
-                    el.innerHTML = translations[lang][key];
+        if (typeof translations !== 'undefined') {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.value = translations[lang][key];
+                    } else {
+                        el.innerHTML = translations[lang][key];
+                    }
                 }
-            }
-        });
+            });
+        }
 
-        // Toggle content sections
         document.querySelectorAll('[data-lang-content]').forEach(section => {
             section.style.display = section.getAttribute('data-lang-content') === lang ? 'block' : 'none';
         });
@@ -577,38 +945,51 @@
         });
     }
 
+    function scrollToCard(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        document.querySelectorAll('.toc-btn').forEach(b => b.classList.remove('active'));
+        event.target.classList.add('active');
+    }
+
+    // Highlight active TOC based on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+                document.querySelectorAll('.toc-btn').forEach(b => b.classList.remove('active'));
+                if (id === 'terms-card') document.querySelectorAll('.toc-btn')[0].classList.add('active');
+                if (id === 'refund-card') document.querySelectorAll('.toc-btn')[1].classList.add('active');
+            }
+        });
+    }, { rootMargin: '-120px 0px -60% 0px' });
+
+    ['terms-card', 'refund-card'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+    });
+
     // Mobile menu
     const mobileBtn = document.getElementById('mobile-menu-btn');
     const navLinks = document.getElementById('nav-links');
-    if(mobileBtn) {
-        mobileBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    }
+    if (mobileBtn) mobileBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
 
     // Language dropdown
     const dropdownToggle = document.querySelector('.dropdown-toggle');
     const dropdownMenu = document.querySelector('.dropdown-menu');
-    if(dropdownToggle) {
+    if (dropdownToggle) {
         dropdownToggle.addEventListener('click', (e) => {
             e.stopPropagation();
             dropdownMenu.classList.toggle('show');
         });
     }
-
     document.querySelectorAll('.dropdown-menu button').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const lang = btn.dataset.lang;
-            updatePageLanguage(lang);
+        btn.addEventListener('click', () => {
+            updatePageLanguage(btn.dataset.lang);
             dropdownMenu.classList.remove('show');
         });
     });
+    document.addEventListener('click', () => { if (dropdownMenu) dropdownMenu.classList.remove('show'); });
 
-    document.addEventListener('click', () => {
-        if(dropdownMenu) dropdownMenu.classList.remove('show');
-    });
-
-    // Initialize
     updatePageLanguage(currentLang);
 </script>
 </body>

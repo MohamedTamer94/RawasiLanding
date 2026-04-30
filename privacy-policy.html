@@ -243,6 +243,21 @@
             display: inline-block;
         }
 
+        .notice-box {
+            background: #fff8e1;
+            border-left: 4px solid #f59e0b;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            color: #6b4c00;
+            font-size: 0.95rem;
+        }
+
+        [dir="rtl"] .notice-box {
+            border-left: none;
+            border-right: 4px solid #f59e0b;
+        }
+
         hr {
             margin: 30px 0;
             border: none;
@@ -365,140 +380,290 @@
     <section class="content-section">
         <div class="container">
             <div class="legal-card">
-                <div class="last-updated" data-i18n="last_updated">📅 Last Updated: April, 2026</div>
+                <div class="last-updated" data-i18n="last_updated">📅 Last Updated: April 2026</div>
 
-                <!-- ENGLISH CONTENT -->
+                <!-- ==================== ENGLISH CONTENT ==================== -->
                 <div class="policy-content-en" data-lang-content="en">
-                    <h3>1. Introduction</h3>
+
+                    <h3>1. About Rawasi</h3>
                     <p>
-                        Welcome to Rawasi! We respect your privacy and are committed to protecting your information. This policy explains how we collect, use, and safeguard your data when using our learning platforms.
+                        Rawasi is a trade name operated by an individual service provider based in Egypt. Rawasi provides white-label Learning Management System (LMS) platforms to academies, tutors, and trainers. Rawasi is not a registered company at this time; all services are provided on an individual basis under Egyptian law.
                     </p>
 
-                    <h3>2. Information We Collect</h3>
+                    <h3>2. Scope of This Policy</h3>
+                    <p>
+                        This Privacy Policy applies to:
+                    </p>
                     <ul>
-                        <li>Landing Page: We do not collect any information. After contacting us, we ask questions to understand your LMS requirements.</li>
-                        <li>Within the platform: We collect the following data only:
-                            <ul>
-                                <li>Names</li>
-                                <li>Email addresses</li>
-                                <li>Phone numbers</li>
-                                <li>Student progress and grades</li>
-                                <li>Uploaded files by students and teachers</li>
-                            </ul>
+                        <li>Visitors to the Rawasi website (rawasi.app)</li>
+                        <li>Clients who subscribe to a Rawasi LMS platform (referred to as "LMS Owners")</li>
+                        <li>End users of any LMS platform built and hosted by Rawasi (students, instructors, and administrators)</li>
+                    </ul>
+
+                    <h3>3. Information We Collect</h3>
+
+                    <p><strong>A. On the Rawasi Website (rawasi.app)</strong></p>
+                    <p>
+                        We do not use tracking cookies, advertising pixels, or analytics tools on our landing page. When you contact us (via WhatsApp or email), we collect only the information you voluntarily share, such as your name, contact details, and your LMS requirements.
+                    </p>
+
+                    <p><strong>B. On Client LMS Platforms</strong></p>
+                    <p>
+                        Each LMS platform we build for a client operates under the client's own domain and branding. Within those platforms, the following data is collected from end users:
+                    </p>
+                    <ul>
+                        <li>Full name</li>
+                        <li>Email address</li>
+                        <li>Phone number</li>
+                        <li>Student progress, grades, and quiz results</li>
+                        <li>Files uploaded by students and instructors (assignments, materials, etc.)</li>
+                    </ul>
+
+                    <p><strong>C. Payment-Related Information</strong></p>
+                    <p>
+                        Rawasi handles payments in two ways:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>LMS Subscription Fees:</strong> Clients pay Rawasi directly for their LMS subscription (monthly or annually) via bank transfer (Instapay) or mobile wallet (Vodafone Cash). These transactions are conducted manually at this stage of operations. Rawasi does not store your full payment details; only records of the transaction amount and date are kept for accounting purposes.
+                        </li>
+                        <li>
+                            <strong>Course Payments on Client LMS Platforms:</strong> If an LMS Owner enables paid courses, student payments are processed through Kashier, a licensed Egyptian payment gateway. Rawasi collects these payments on behalf of the LMS Owner in its capacity as the platform's technical operator. Rawasi then disburses the collected amounts to the LMS Owner manually. Kashier's own privacy policy governs how payment card data is handled — Rawasi does not store card numbers or sensitive payment credentials.
                         </li>
                     </ul>
 
-                    <h3>3. Data Ownership & Usage</h3>
+                    <div class="notice-box">
+                        ⚠️ <strong>Note:</strong> The course payment collection arrangement described above is currently handled manually during Rawasi's early-stage operations. This model will be updated as Rawasi formalizes its business structure.
+                    </div>
+
+                    <h3>4. How We Use Your Information</h3>
                     <ul>
-                        <li>All data belongs to the client/academy owning the platform.</li>
-                        <li>We store data in our databases as a data processor only.</li>
-                        <li>We do not use the data for commercial or personal purposes.</li>
+                        <li>To provision, operate, and maintain your LMS platform</li>
+                        <li>To communicate with you regarding your subscription, platform, or support requests</li>
+                        <li>To process payments and maintain basic financial records</li>
+                        <li>To disburse collected course revenues to LMS Owners</li>
+                        <li>We do not use your data for advertising, marketing to third parties, or any commercial purpose beyond operating your platform</li>
                     </ul>
 
-                    <h3>4. Data Storage & Security</h3>
+                    <h3>5. Data Ownership</h3>
+                    <p>
+                        All data generated within an LMS platform — including user accounts, course content, student records, and uploaded files — belongs exclusively to the LMS Owner (the client who subscribed to that platform). Rawasi acts solely as a data processor and has no ownership claim over this data. Rawasi will not use, transfer, or disclose this data without the explicit written authorization of the LMS Owner, except as required by applicable Egyptian law.
+                    </p>
+
+                    <h3>6. Data Storage & Security</h3>
                     <ul>
-                        <li>Data is hosted on a single VPS in Europe via Netcup.</li>
-                        <li>We use HTTPS and hashed passwords to secure data.</li>
-                        <li>Login is available via email/password or Google Login.</li>
-                        <li>We do not store chat messages or personal communications.</li>
+                        <li>All platform data is hosted on a Virtual Private Server (VPS) located in Europe, provided by Netcup.</li>
+                        <li>All data in transit is encrypted via HTTPS/TLS.</li>
+                        <li>Passwords are stored using cryptographic hashing (not in plain text).</li>
+                        <li>Users may authenticate via email/password or Google Login (OAuth 2.0).</li>
+                        <li>Support conversations and WhatsApp communications are not stored on our servers.</li>
+                        <li>Rawasi implements reasonable technical measures to protect data but cannot guarantee absolute security against all threats.</li>
                     </ul>
 
-                    <h3>5. Payments</h3>
+                    <h3>7. Third-Party Services</h3>
                     <p>
-                        Rawasi does not collect any payments directly. All payments are handled by the client/academy according to their agreement with Rawasi.
+                        Rawasi uses the following third-party services in its operations:
                     </p>
-
-                    <h3>6. Data Sharing</h3>
-                    <p>
-                        We do not share data with third parties without explicit consent, unless required by law.
-                    </p>
-
-                    <h3>7. Your Rights</h3>
                     <ul>
-                        <li>You may request access to your data or correct it.</li>
-                        <li>You may request deletion of your data according to applicable laws.</li>
+                        <li><strong>Kashier</strong> — Payment processing for course purchases on client LMS platforms. Kashier is a licensed Egyptian payment service provider regulated by the Central Bank of Egypt. Their privacy policy applies to all payment transactions.</li>
+                        <li><strong>Netcup</strong> — Server hosting (VPS) located in Europe. Data stored on this server is subject to Netcup's data processing terms.</li>
+                        <li><strong>Google (OAuth)</strong> — Optional login via Google account. Google's privacy policy applies if this option is used.</li>
+                    </ul>
+                    <p>
+                        Rawasi is not responsible for the data practices of these third-party providers. We encourage you to review their respective privacy policies.
+                    </p>
+
+                    <h3>8. Data Sharing & Disclosure</h3>
+                    <p>
+                        We do not sell, rent, or trade your personal data. We may disclose data only in the following circumstances:
+                    </p>
+                    <ul>
+                        <li>With the LMS Owner, regarding their own platform's users (as part of platform management)</li>
+                        <li>With third-party service providers listed above, solely to the extent necessary to operate the service</li>
+                        <li>When required by Egyptian law, court order, or a competent governmental authority</li>
                     </ul>
 
-                    <h3>8. Changes to this Privacy Policy</h3>
+                    <h3>9. Your Rights</h3>
                     <p>
-                        We may update this policy at any time. Changes take effect immediately upon posting on the website.
+                        Under Egyptian Consumer Protection Law No. 181/2018 and applicable data protection principles, you have the right to:
+                    </p>
+                    <ul>
+                        <li>Request access to your personal data held by Rawasi</li>
+                        <li>Request correction of inaccurate personal data</li>
+                        <li>Request deletion of your personal data, subject to legal retention obligations</li>
+                        <li>Withdraw consent to data processing, where processing is based on consent</li>
+                    </ul>
+                    <p>
+                        To exercise any of these rights, contact us using the details in Section 12 below.
                     </p>
 
-                    <h3>9. Contact Us</h3>
+                    <h3>10. Data Retention</h3>
                     <p>
-                        For any privacy-related inquiries, please contact us via:
+                        We retain client and platform data for as long as the subscription is active. Upon termination of the subscription, Rawasi will retain data for a reasonable period (not exceeding 30 days) to allow for potential data export requests, after which it will be permanently deleted unless otherwise agreed in writing or required by law.
+                    </p>
+
+                    <h3>11. Changes to This Privacy Policy</h3>
+                    <p>
+                        Rawasi may update this Privacy Policy from time to time to reflect changes in our operations, legal requirements, or business structure. The updated version will be posted on our website with a revised "Last Updated" date. Continued use of our services after any update constitutes acceptance of the revised policy. We encourage you to review this page periodically.
+                    </p>
+
+                    <h3>12. Governing Law</h3>
+                    <p>
+                        This Privacy Policy is governed by the laws of the Arab Republic of Egypt, including the Consumer Protection Law No. 181/2018 and any applicable data protection regulations. Any disputes arising under this policy shall be subject to the jurisdiction of the competent Egyptian courts.
+                    </p>
+
+                    <h3>13. Contact Us</h3>
+                    <p>
+                        For any privacy-related inquiries, data access requests, or concerns, please contact us via:
+                    </p>
                     <ul>
                         <li>WhatsApp: +20 101 319 0522</li>
                         <li>Email: hello@rawasi.app</li>
                     </ul>
-                    </p>
+                    <p>We aim to respond to all inquiries within 5 business days.</p>
+
                 </div>
 
-                <!-- ARABIC CONTENT -->
+                <!-- ==================== ARABIC CONTENT ==================== -->
                 <div class="policy-content-ar" data-lang-content="ar" style="display: none;">
-                    <h3>1. المقدمة</h3>
+
+                    <h3>1. عن رواسي</h3>
                     <p>
-                        مرحبًا بكم في رواسي! نحن نحترم خصوصيتك وملتزمون بحماية معلوماتك. توضح هذه السياسة كيفية جمع واستخدام وحماية بياناتك عند استخدام منصاتنا التعليمية.
+                        رواسي هي اسم تجاري يُشغّله فرد مستقل مقيم في مصر. تقدم رواسي منصات تعليمية (LMS) بالعلامة البيضاء للأكاديميات والمدرسين والمدربين. رواسي ليست شركة مسجلة في الوقت الحالي، وتُقدَّم جميع الخدمات على أساس فردي وفقًا للقانون المصري.
                     </p>
 
-                    <h3>2. المعلومات التي نجمعها</h3>
+                    <h3>2. نطاق هذه السياسة</h3>
+                    <p>
+                        تنطبق سياسة الخصوصية هذه على:
+                    </p>
                     <ul>
-                        <li>على صفحة الهبوط: لا نقوم بجمع أي بيانات. بعد تواصلك معنا، نسألك عن احتياجاتك لإنشاء منصتك.</li>
-                        <li>في المنصة التعليمية: نقوم بجمع البيانات التالية فقط:
-                            <ul>
-                                <li>الأسماء</li>
-                                <li>البريد الإلكتروني</li>
-                                <li>أرقام الهاتف</li>
-                                <li>تقدم الطلاب ودرجاتهم</li>
-                                <li>الملفات المرفوعة من قبل الطلاب والمعلمين</li>
-                            </ul>
+                        <li>زوار موقع رواسي (rawasi.app)</li>
+                        <li>العملاء المشتركين في منصة LMS عبر رواسي (يُشار إليهم بـ "أصحاب المنصات")</li>
+                        <li>المستخدمين النهائيين لأي منصة تعليمية مبنية ومستضافة عبر رواسي (الطلاب والمعلمون والمسؤولون)</li>
+                    </ul>
+
+                    <h3>3. المعلومات التي نجمعها</h3>
+
+                    <p><strong>أ. على موقع رواسي (rawasi.app)</strong></p>
+                    <p>
+                        لا نستخدم ملفات تعريف الارتباط للتتبع أو أي أدوات تحليل على صفحة الهبوط. عند تواصلك معنا (عبر واتساب أو البريد الإلكتروني)، نجمع فقط المعلومات التي تشاركها طوعًا، مثل اسمك وبيانات تواصلك ومتطلبات منصتك.
+                    </p>
+
+                    <p><strong>ب. على منصات العملاء التعليمية</strong></p>
+                    <p>
+                        تعمل كل منصة تعليمية نبنيها للعميل تحت نطاقه وعلامته التجارية الخاصة. يتم جمع البيانات التالية من المستخدمين النهائيين داخل تلك المنصات:
+                    </p>
+                    <ul>
+                        <li>الاسم الكامل</li>
+                        <li>البريد الإلكتروني</li>
+                        <li>رقم الهاتف</li>
+                        <li>تقدم الطالب، ودرجاته، ونتائج الاختبارات</li>
+                        <li>الملفات التي يرفعها الطلاب والمعلمون (الواجبات، المواد الدراسية، إلخ)</li>
+                    </ul>
+
+                    <p><strong>ج. المعلومات المتعلقة بالمدفوعات</strong></p>
+                    <p>
+                        تتعامل رواسي مع المدفوعات بطريقتين:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>رسوم الاشتراك في المنصة:</strong> يدفع العملاء رسوم اشتراكهم الشهرية أو السنوية مباشرةً لرواسي عبر التحويل البنكي (انستاباي) أو المحفظة الإلكترونية (فودافون كاش). تتم هذه المعاملات يدويًا في المرحلة الحالية. لا تحتفظ رواسي ببيانات الدفع الكاملة؛ يُحتفظ فقط بسجلات مبلغ وتاريخ المعاملة لأغراض المحاسبة.
+                        </li>
+                        <li>
+                            <strong>مدفوعات الكورسات على منصات العملاء:</strong> إذا أتاح صاحب المنصة كورسات مدفوعة، تُعالَج مدفوعات الطلاب عبر Kashier، بوابة دفع مرخصة في مصر. تقوم رواسي بتحصيل هذه المبالغ نيابةً عن صاحب المنصة بصفتها المشغّل التقني للمنصة، ثم تقوم بتحويل المبالغ المحصّلة يدويًا إلى صاحب المنصة. تحكم سياسة خصوصية Kashier الخاصة كيفية التعامل مع بيانات بطاقات الدفع — لا تحتفظ رواسي بأرقام البطاقات أو بيانات الدفع الحساسة.
                         </li>
                     </ul>
 
-                    <h3>3. ملكية البيانات واستخدامها</h3>
+                    <div class="notice-box">
+                        ⚠️ <strong>ملاحظة:</strong> يُدار ترتيب تحصيل مدفوعات الكورسات المذكور أعلاه يدويًا خلال المراحل الأولى من تشغيل رواسي. سيتم تحديث هذا النموذج مع نمو الهيكل التجاري لرواسي.
+                    </div>
+
+                    <h3>4. كيفية استخدام معلوماتك</h3>
                     <ul>
-                        <li>البيانات ملك للعميل/الأكاديمية التي تمتلك المنصة.</li>
-                        <li>نخزن البيانات في قواعد بياناتنا كمعالج بيانات فقط.</li>
-                        <li>لا نستخدم البيانات لأي أغراض تجارية أو شخصية.</li>
+                        <li>لإعداد وتشغيل وصيانة منصتك التعليمية</li>
+                        <li>للتواصل معك بشأن اشتراكك أو منصتك أو طلبات الدعم</li>
+                        <li>لمعالجة المدفوعات والاحتفاظ بالسجلات المالية الأساسية</li>
+                        <li>لصرف عائدات الكورسات المحصّلة لأصحاب المنصات</li>
+                        <li>لا نستخدم بياناتك للإعلانات أو التسويق لأطراف ثالثة أو لأي غرض تجاري خارج نطاق تشغيل منصتك</li>
                     </ul>
 
-                    <h3>4. تخزين البيانات وأمانها</h3>
+                    <h3>5. ملكية البيانات</h3>
+                    <p>
+                        جميع البيانات المُولَّدة داخل منصة LMS — بما في ذلك حسابات المستخدمين ومحتوى الكورسات وسجلات الطلاب والملفات المرفوعة — تعود بالكامل لصاحب المنصة (العميل المشترك في تلك المنصة). تعمل رواسي فقط بصفة معالج للبيانات وليس لها أي ادعاء بملكية هذه البيانات. لن تستخدم رواسي هذه البيانات أو تنقلها أو تُفصح عنها دون إذن كتابي صريح من صاحب المنصة، إلا إذا اقتضى ذلك القانون المصري المعمول به.
+                    </p>
+
+                    <h3>6. تخزين البيانات وأمانها</h3>
                     <ul>
-                        <li>يتم استضافة البيانات على VPS واحد في أوروبا عبر مزود CloudNetcup.</li>
-                        <li>نستخدم بروتوكول HTTPS وكلمات مرور مشفرة لضمان الأمان.</li>
-                        <li>تسجيل الدخول متاح عبر البريد الإلكتروني وكلمة المرور أو Google Login.</li>
-                        <li>لا نقوم بتخزين محادثات الدعم أو أي تواصل شخصي.</li>
+                        <li>تُستضاف جميع بيانات المنصات على خادم VPS موجود في أوروبا، مقدَّم عبر Netcup.</li>
+                        <li>جميع البيانات المنقولة مشفّرة عبر HTTPS/TLS.</li>
+                        <li>تُخزَّن كلمات المرور باستخدام التشفير المزدوج (hashing) وليس بصيغة نص عادي.</li>
+                        <li>يمكن للمستخدمين تسجيل الدخول عبر البريد الإلكتروني/كلمة المرور أو عبر Google Login (OAuth 2.0).</li>
+                        <li>لا تُخزَّن محادثات الدعم أو مراسلات واتساب على خوادمنا.</li>
+                        <li>تتخذ رواسي تدابير تقنية معقولة لحماية البيانات، غير أنها لا تستطيع ضمان الأمان المطلق ضد جميع التهديدات.</li>
                     </ul>
 
-                    <h3>5. المدفوعات</h3>
+                    <h3>7. الخدمات الخارجية</h3>
                     <p>
-                        لا نقوم بجمع أي مدفوعات مباشرة. جميع المدفوعات تتم عبر العميل/الأكاديمية وفق اتفاقهم مع Rawasi.
+                        تستخدم رواسي الخدمات الخارجية التالية في عملياتها:
                     </p>
-
-                    <h3>6. مشاركة البيانات</h3>
-                    <p>
-                        لا يتم مشاركة البيانات مع أي طرف ثالث بدون موافقة صريحة، إلا إذا كان ذلك مطلوبًا بموجب القانون.
-                    </p>
-
-                    <h3>7. حقوقك</h3>
                     <ul>
-                        <li>يمكنك طلب الوصول إلى بياناتك أو تصحيحها.</li>
-                        <li>يمكنك طلب حذف بياناتك وفق القوانين المعمول بها.</li>
+                        <li><strong>Kashier</strong> — معالجة مدفوعات الكورسات على منصات العملاء. Kashier مزود خدمة دفع مرخص في مصر وخاضع لرقابة البنك المركزي المصري. تنطبق سياسة الخصوصية الخاصة بهم على جميع معاملات الدفع.</li>
+                        <li><strong>Netcup</strong> — استضافة الخادم (VPS) في أوروبا. البيانات المخزنة على هذا الخادم خاضعة لشروط معالجة البيانات الخاصة بـ Netcup.</li>
+                        <li><strong>Google (OAuth)</strong> — تسجيل الدخول الاختياري عبر حساب Google. تنطبق سياسة خصوصية Google في حال استخدام هذا الخيار.</li>
+                    </ul>
+                    <p>
+                        رواسي غير مسؤولة عن ممارسات البيانات الخاصة بمزودي الخدمات الخارجيين هؤلاء. نشجعك على مراجعة سياسات الخصوصية الخاصة بهم.
+                    </p>
+
+                    <h3>8. مشاركة البيانات والإفصاح عنها</h3>
+                    <p>
+                        لا نبيع بياناتك الشخصية أو نؤجرها أو نتاجر بها. لا نُفصح عن البيانات إلا في الحالات التالية:
+                    </p>
+                    <ul>
+                        <li>مع صاحب المنصة، فيما يتعلق بمستخدمي منصته (كجزء من إدارة المنصة)</li>
+                        <li>مع مزودي الخدمات الخارجيين المذكورين أعلاه، بالقدر الضروري فقط لتشغيل الخدمة</li>
+                        <li>عند اشتراط القانون المصري أو أمر المحكمة أو جهة حكومية مختصة ذلك</li>
                     </ul>
 
-                    <h3>8. تغييرات سياسة الخصوصية</h3>
+                    <h3>9. حقوقك</h3>
                     <p>
-                        يحق لنا تعديل هذه السياسة في أي وقت. ستصبح التعديلات سارية بمجرد نشرها على الموقع.
+                        بموجب قانون حماية المستهلك المصري رقم 181 لسنة 2018 ومبادئ حماية البيانات المعمول بها، يحق لك:
+                    </p>
+                    <ul>
+                        <li>طلب الاطلاع على بياناتك الشخصية التي تحتفظ بها رواسي</li>
+                        <li>طلب تصحيح البيانات الشخصية غير الدقيقة</li>
+                        <li>طلب حذف بياناتك الشخصية، مع مراعاة الالتزامات القانونية للاحتفاظ بالبيانات</li>
+                        <li>سحب الموافقة على معالجة البيانات، حيث تستند المعالجة إلى الموافقة</li>
+                    </ul>
+                    <p>
+                        لممارسة أي من هذه الحقوق، تواصل معنا عبر البيانات الواردة في البند 12 أدناه.
                     </p>
 
-                    <h3>9. الاتصال بنا</h3>
+                    <h3>10. مدة الاحتفاظ بالبيانات</h3>
                     <p>
-                        لأي استفسارات حول سياسة الخصوصية، يرجى التواصل عبر:
+                        نحتفظ ببيانات العميل والمنصة طوال مدة سريان الاشتراك. عند انتهاء الاشتراك، تحتفظ رواسي بالبيانات لمدة معقولة (لا تتجاوز 30 يومًا) للسماح بطلبات تصدير البيانات، وبعدها تُحذف نهائيًا ما لم يُتفق على خلاف ذلك كتابيًا أو يقتضيه القانون.
+                    </p>
+
+                    <h3>11. التغييرات على سياسة الخصوصية</h3>
+                    <p>
+                        قد تُحدّث رواسي سياسة الخصوصية هذه من وقت لآخر لتعكس التغييرات في عملياتها أو المتطلبات القانونية أو الهيكل التجاري. ستُنشر النسخة المحدثة على موقعنا مع تاريخ "آخر تحديث" مُعدَّل. استمرارك في استخدام خدماتنا بعد أي تحديث يُعدّ قبولًا للسياسة المُعدَّلة. نشجعك على مراجعة هذه الصفحة بانتظام.
+                    </p>
+
+                    <h3>12. القانون الحاكم</h3>
+                    <p>
+                        تخضع سياسة الخصوصية هذه لقوانين جمهورية مصر العربية، بما في ذلك قانون حماية المستهلك رقم 181 لسنة 2018 وأي لوائح حماية بيانات معمول بها. تختص المحاكم المصرية المختصة بالنظر في أي نزاعات تنشأ بموجب هذه السياسة.
+                    </p>
+
+                    <h3>13. الاتصال بنا</h3>
+                    <p>
+                        لأي استفسارات تتعلق بالخصوصية أو طلبات الوصول إلى البيانات أو الشكاوى، يرجى التواصل معنا عبر:
+                    </p>
                     <ul>
-                        <li>واتساب: 01013190522</li>
+                        <li>واتساب: 01013190522+20</li>
                         <li>البريد الإلكتروني: hello@rawasi.app</li>
                     </ul>
-                    </p>
+                    <p>نهدف إلى الرد على جميع الاستفسارات خلال 5 أيام عمل.</p>
+
                 </div>
             </div>
         </div>
@@ -529,30 +694,22 @@
                 </ul>
             </div>
 
-            <div class="footer-links">
-                <h3 class="footer-heading" data-i18n="footer_links2">Resources</h3>
-                <ul class="footer-links">
-                    <li><a href="privacy-policy" class="footer-link" data-i18n="footer_link5">Privacy Policy</a></li>
-                    <li><a href="terms-and-conditions" class="footer-link" data-i18n="footer_link6">Terms and Conditions</a></li>
-                </ul>
-            </div>
-
             <div class="footer-contact">
                 <h3 class="footer-heading" data-i18n="footer_contact">Contact Us</h3>
-                <p><span class="material-symbols-outlined icon">chat</span> <span data-i18n="footer_whatsapp">WhatsApp: +20 123 456 7890</span></p>
+                <p><span class="material-symbols-outlined icon">chat</span> <span data-i18n="footer_whatsapp">WhatsApp: +20 101 319 0522</span></p>
                 <p><span class="material-symbols-outlined icon">mail</span> <span data-i18n="footer_email">hello@rawasi.app</span></p>
                 <p><span class="material-symbols-outlined icon">schedule</span> <span data-i18n="footer_hours">Sat-Thu: 9am - 6pm</span></p>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; <span data-i18n="footer_copyright">2026 Rawasi. All rights reserved.</span> | <a href="#" class="footer-link" data-i18n="footer_privacy">Privacy Policy</a> | <a href="#" class="footer-link" data-i18n="footer_terms">Terms</a></p>
+            <p>&copy; <span data-i18n="footer_copyright">2026 Rawasi. All rights reserved.</span> | <a href="privacy-policy" class="footer-link" data-i18n="footer_privacy">Privacy Policy</a> | <a href="terms-and-conditions" class="footer-link" data-i18n="footer_terms">Terms</a></p>
         </div>
     </div>
 </footer>
+
 <script src="assets/js/localization.js"></script>
 <script>
-
     let currentLang = localStorage.getItem('rawasi-lang') || 'en';
 
     function updatePageLanguage(lang) {
@@ -563,7 +720,7 @@
 
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
+            if (translations && translations[lang] && translations[lang][key]) {
                 if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                     el.value = translations[lang][key];
                 } else {
@@ -585,7 +742,7 @@
     // Mobile menu
     const mobileBtn = document.getElementById('mobile-menu-btn');
     const navLinks = document.getElementById('nav-links');
-    if(mobileBtn) {
+    if (mobileBtn) {
         mobileBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
@@ -594,7 +751,7 @@
     // Language dropdown
     const dropdownToggle = document.querySelector('.dropdown-toggle');
     const dropdownMenu = document.querySelector('.dropdown-menu');
-    if(dropdownToggle) {
+    if (dropdownToggle) {
         dropdownToggle.addEventListener('click', (e) => {
             e.stopPropagation();
             dropdownMenu.classList.toggle('show');
@@ -602,7 +759,7 @@
     }
 
     document.querySelectorAll('.dropdown-menu button').forEach(btn => {
-        btn.addEventListener('click', (e) => {
+        btn.addEventListener('click', () => {
             const lang = btn.dataset.lang;
             updatePageLanguage(lang);
             dropdownMenu.classList.remove('show');
@@ -610,7 +767,7 @@
     });
 
     document.addEventListener('click', () => {
-        if(dropdownMenu) dropdownMenu.classList.remove('show');
+        if (dropdownMenu) dropdownMenu.classList.remove('show');
     });
 
     // Initialize
